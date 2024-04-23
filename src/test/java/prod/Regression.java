@@ -102,6 +102,7 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
+		element.getAcceptCookies().click();
 		FacebookLogin element1 = new FacebookLogin(driver);
 		element.getAcceptCookies().click();
 		element.getSignInLink().click();
@@ -198,7 +199,9 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
-		driver.findElement(By.xpath("//div[@data-for='blogs']")).click();
+		CreateAlertElements element = new CreateAlertElements(driver);
+		element.getAcceptCookies().click();
+		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
 		WebElement popularArticles = driver.findElement(By.xpath("//div[@class='popular_article_inner cursor-pointer parentNode']"));
 		Assert.assertEquals(popularArticles.isDisplayed(), true);
 		
@@ -209,7 +212,9 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
-		driver.findElement(By.xpath("//div[@data-for='blogs']")).click();
+		CreateAlertElements element = new CreateAlertElements(driver);
+		element.getAcceptCookies().click();
+		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
 		WebElement popularTopics = driver.findElement(By.xpath("//*[@id=\"bar-fixed\"]/div[2]/div/div/div[2]/div"));
 		Assert.assertEquals(popularTopics.isDisplayed(), true);
 		
@@ -220,7 +225,9 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
-		driver.findElement(By.xpath("//div[@data-for='blogs']")).click();
+		CreateAlertElements element = new CreateAlertElements(driver);
+		element.getAcceptCookies().click();
+		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
 		WebElement popularBlogs = driver.findElement(By.xpath("//*[@id=\"blog-list\"]"));
 		Assert.assertEquals(popularBlogs.isDisplayed(), true);
 		
@@ -230,8 +237,8 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		CreateAlertElements element = new CreateAlertElements(driver);
+		element.getAcceptCookies().click();
 		WebElement AppstoreImage = driver.findElement(By.xpath("//div[@class='app-store-img']"));
 		Assert.assertEquals(AppstoreImage.isDisplayed(), true);
 	
