@@ -22,7 +22,7 @@ public class BaseClass {
 	// Executing before test
 	@BeforeMethod
 	public void preConditions() throws Throwable{
-		ScreenRecorderUtil.startRecord("preConditions");
+//		ScreenRecorderUtil.startRecord("preConditions");
 		String browserName = fileUtils.readFromPropertyFile("browser");
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -44,8 +44,8 @@ public class BaseClass {
 	//Executing after test
 	@AfterMethod
 	public void postConditions() throws Exception {
-		ScreenRecorderUtil.stopRecord();
+//		ScreenRecorderUtil.stopRecord();
 		driver.close();
 		driver.quit();	
-	}
+		Thread.sleep(1000);	}
 }

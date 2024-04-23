@@ -9,7 +9,10 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testCases.TestClass1"/>
+      <class name="stage.Alerts"></class>
+      
+      
+      
        </classes>
   </test> <!-- Test -->
   
