@@ -32,7 +32,7 @@ public class BaseClass {
 	        options.addArguments("--disable-gpu"); // applicable to windows os only
 	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 	        options.addArguments("--no-sandbox");
-	        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver");
+//	        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver");
 //	        System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\chromedriver.exe");
 			driver = new ChromeDriver(options);
 			}
