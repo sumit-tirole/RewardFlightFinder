@@ -27,6 +27,12 @@ public class BaseClass {
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--remote-allow-origins=*");
+//	        options.addArguments("--headless");
+	        options.addArguments("--disable-extensions"); // disabling extensions
+	        options.addArguments("--disable-gpu"); // applicable to windows os only
+	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+	        options.addArguments("--no-sandbox");
+	        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver");
 //	        System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\chromedriver.exe");
 			driver = new ChromeDriver(options);
 			}
