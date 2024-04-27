@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,10 +17,9 @@ import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.AppleLogin;
 import com.flightfinder.pomrepo.CreateAlertElements;
-import com.flightfinder.pomrepo.DeleteAlertElements;
-import com.flightfinder.pomrepo.EditAlertElements;
 import com.flightfinder.pomrepo.FacebookLogin;
 import com.flightfinder.pomrepo.GoogleLogin;
+import com.flightfinder.pomrepo.ProdElements;
 import com.flightfinder.pomrepo.SignUpElements;
 
 
@@ -75,17 +73,18 @@ public class Regression extends BaseClass {
 		
 		for(String window:windows) {
 			driver.switchTo().window(window);
+			System.out.println(window);
 			if(driver.getCurrentUrl().equals("https://rewardflightfinder.com/")) {
 			}
 			else {
 				break;
 			}
 		}
-		
+			
 		element1.getGoogleEmailTextField().sendKeys(fileUtils.readFromPropertyFile("gmail"));
 		element1.getNextButton().click();
 		element1.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("gmailpassword"));
-		element1.getNextButton().click();
+		element1.getPasswordNext().click();
 		for(String window:windows) {
 			driver.switchTo().window(window);
 			if(driver.getCurrentUrl().equals("https://rewardflightfinder.com/")) {
@@ -102,7 +101,6 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
 		FacebookLogin element1 = new FacebookLogin(driver);
 		element.getAcceptCookies().click();
 		element.getSignInLink().click();
@@ -129,6 +127,7 @@ public class Regression extends BaseClass {
 			break;
 			}
 		}
+		
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 		
@@ -200,10 +199,10 @@ public class Regression extends BaseClass {
 		}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
+		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
-		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
-		WebElement popularArticles = driver.findElement(By.xpath("//div[@class='popular_article_inner cursor-pointer parentNode']"));
-		Assert.assertEquals(popularArticles.isDisplayed(), true);
+		element1.getArticlesIcon().click();
+		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
 		
 	}
 	
@@ -213,10 +212,10 @@ public class Regression extends BaseClass {
 		}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
+		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
-		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
-		WebElement popularTopics = driver.findElement(By.xpath("//*[@id=\"bar-fixed\"]/div[2]/div/div/div[2]/div"));
-		Assert.assertEquals(popularTopics.isDisplayed(), true);
+		element1.getArticlesIcon().click();
+		Assert.assertEquals(element1.getPopularTopics().isDisplayed(), true);
 		
 	}
 	
@@ -226,10 +225,10 @@ public class Regression extends BaseClass {
 		}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
+		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
-		driver.findElement(By.xpath("(//*[local-name()='svg'])[3]")).click();
-		WebElement popularBlogs = driver.findElement(By.xpath("//*[@id=\"blog-list\"]"));
-		Assert.assertEquals(popularBlogs.isDisplayed(), true);
+		element1.getArticlesIcon().click();
+		Assert.assertEquals(element1.getPopularBlogs().isDisplayed(), true);
 		
 	}
 	@Test(priority=10 , enabled=true)
@@ -238,9 +237,9 @@ public class Regression extends BaseClass {
 		}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
+		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
-		WebElement AppstoreImage = driver.findElement(By.xpath("//div[@class='app-store-img']"));
-		Assert.assertEquals(AppstoreImage.isDisplayed(), true);
+		Assert.assertEquals(element1.getAppstoreImage().isDisplayed(), true);
 	
 	}
 	
@@ -249,8 +248,9 @@ public void KbarHeader() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
-	WebElement KbarHeader = driver.findElement(By.xpath("//div[@class='kbar-header']"));
-	Assert.assertEquals(KbarHeader.isDisplayed(), true);
+	ProdElements element = new ProdElements(driver);
+	Assert.assertEquals(element.getKbar().isDisplayed(), true);
+	
 }
 
 @Test(priority=12 , enabled=true)
@@ -258,16 +258,16 @@ public void Guestuser() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
+	ProdElements element1 = new ProdElements(driver);
 	element.getAcceptCookies().click();
 	Actions action = new Actions(driver);
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
-	Thread.sleep(10000);
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-	Thread.sleep(10000);
-	WebElement Guestuser = driver.findElement(By.xpath("//*[@id=\"main-header\"]/div/nav[2]/span[1]/div"));
-	Assert.assertEquals(Guestuser.isDisplayed(), true);
+	js.executeScript("window.scrollBy(0, 1500)");
+	Assert.assertEquals(element1.getGuestUserPopup().isDisplayed(), true);
 
 }
 
@@ -277,15 +277,13 @@ public void facebook() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement facebook = driver.findElement(By.xpath("(//i[@class='sc-cSHVUG hupUHU'])[1]"));
-	try {js.executeAsyncScript("arguments[0].click();",facebook);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+    element.getAcceptCookies().click();
+    
+	try {js.executeAsyncScript("arguments[0].click();",element1.getFacebookIcon());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
-	
+		
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -293,9 +291,7 @@ public void facebook() throws Throwable {
 		}
 		else {break;}
 	}
-	String fbUrl = driver.getCurrentUrl();
-	System.out.println(fbUrl);
-	Assert.assertEquals(fbUrl, "https://www.facebook.com/rewardflightfinder/");
+	Assert.assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/rewardflightfinder/");
 }
 
 
@@ -306,14 +302,12 @@ public void Twitter() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement twitter = driver.findElement(By.xpath("(//i[@class='sc-cSHVUG hupUHU'])[2]"));
-	try {js.executeAsyncScript("arguments[0].click();",twitter);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+    element.getAcceptCookies().click();
+    try {js.executeAsyncScript("arguments[0].click();",element1.getTwitterIcon());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
+	
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -333,14 +327,13 @@ public void Linkedin() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement linkedin = driver.findElement(By.xpath("(//i[@class='sc-cSHVUG hupUHU'])[3]"));
-	try {js.executeAsyncScript("arguments[0].click();",linkedin);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+	element.getAcceptCookies().click();
+    	
+	try {js.executeAsyncScript("arguments[0].click();",element1.getlinkedInIcon());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
+	
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -359,14 +352,13 @@ public void Instagram() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement instagram = driver.findElement(By.xpath("(//i[@class='sc-cSHVUG hupUHU'])[4]"));
-	try {js.executeAsyncScript("arguments[0].click();",instagram);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+    element.getAcceptCookies().click();
+    
+	try {js.executeAsyncScript("arguments[0].click();",element1.getInstagramIcon());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
+	
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -374,9 +366,8 @@ public void Instagram() throws Throwable {
 		}
 		else {break;}
 	}
-	String instagramurl = driver.getCurrentUrl();
-	System.out.println(instagramurl);
-	Assert.assertEquals(instagramurl, "https://www.instagram.com/rewardflightfinder/");
+	
+	Assert.assertEquals(driver.getCurrentUrl(), "https://www.instagram.com/rewardflightfinder/");
 }
 
 
@@ -387,14 +378,13 @@ public void GooglePlay() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement playstoreimg = driver.findElement(By.xpath("//img[@src='https://rewardflightfinder.com/static/media/google-play.b6d3fc79.png']"));
-	try {js.executeAsyncScript("arguments[0].click();",playstoreimg);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+    element.getAcceptCookies().click();
+    
+	try {js.executeAsyncScript("arguments[0].click();",element1.getPlaystoreImage());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
+	
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -402,9 +392,7 @@ public void GooglePlay() throws Throwable {
 		}
 		else {break;}
 	}
-	String playstore = driver.getCurrentUrl();
-	System.out.println(playstore);
-	Assert.assertEquals(playstore, "https://play.google.com/store/apps/details?id=com.rewardflightfinder.app.android");
+	Assert.assertEquals(driver.getCurrentUrl(), "https://play.google.com/store/apps/details?id=com.rewardflightfinder.app.android");
 }
 
 
@@ -414,14 +402,12 @@ public void Applestore() throws Throwable {
 	}
 	catch(WebDriverException e) {}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-   // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    CreateAlertElements element1 = new CreateAlertElements(driver);
-	element1.getAcceptCookies().click();
-    Thread.sleep(5000);
-	WebElement applestoreimg = driver.findElement(By.xpath("//img[@src='https://rewardflightfinder.com/static/media/app-store-img.626b8ae3.png']"));
-	try {js.executeAsyncScript("arguments[0].click();",applestoreimg);}
+    CreateAlertElements element = new CreateAlertElements(driver);
+    ProdElements element1 = new ProdElements(driver);
+    element.getAcceptCookies().click();
+    try {js.executeAsyncScript("arguments[0].click();",element1.getApplestoreImage());}
 	catch (Exception e) {}
-	Thread.sleep(5000);
+	
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
@@ -429,9 +415,7 @@ public void Applestore() throws Throwable {
 		}
 		else {break;}
 	}
-	String appstore = driver.getCurrentUrl();
-	System.out.println(appstore);
-	Assert.assertEquals(appstore, "https://apps.apple.com/us/app/reward-flight-finder/id1467629555");
+		Assert.assertEquals(driver.getCurrentUrl(), "https://apps.apple.com/us/app/reward-flight-finder/id1467629555");
 	}
 	
 

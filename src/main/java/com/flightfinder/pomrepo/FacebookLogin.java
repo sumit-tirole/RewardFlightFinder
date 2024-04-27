@@ -42,31 +42,31 @@ public static WebDriver driver;
 
 	}
 	
-	@FindBy(xpath="//input[@name='email']")
+	@FindBy(xpath="//*[@id=\"email\"]")
 	WebElement fbEmailTextField;
 
 
 	public WebElement getFbEmailTextField() {
-		synchronised(By.xpath("//input[@name='email']"),fbEmailTextField);
+		synchronised(By.xpath("//*[@id=\"email\"]"),fbEmailTextField);
 		return fbEmailTextField;
 	}
 	
 		
-	@FindBy(xpath="//input[@name='pass']")
+	@FindBy(xpath="//*[@id=\"pass\"]")
 	WebElement fbPasswordTextField;
 
 
 	public WebElement getFbPasswordTextField() {
-		synchronised(By.xpath("//input[@name='pass']"),fbPasswordTextField);
+		synchronised(By.xpath("//*[@id=\"pass\"]"),fbPasswordTextField);
 		return fbPasswordTextField;
 	}
 	
-	@FindBy(xpath="//input[@name='login']")
+	@FindBy(xpath="//*[@id=\"loginbutton\"]")
 	WebElement fbLoginButton;
 
 
 	public WebElement getFbLoginButton() {
-		synchronised(By.xpath("//input[@name='login']"),fbLoginButton);
+		synchronised(By.xpath("//*[@id=\"loginbutton\"]"),fbLoginButton);
 		return fbLoginButton;
 	}
 	

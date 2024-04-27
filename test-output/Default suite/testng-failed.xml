@@ -5,7 +5,7 @@
     <classes>
       <class name="prod.Regression">
         <methods>
-          <include name="loginValidCredentials"/>
+          <include name="Guestuser"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
         </methods>

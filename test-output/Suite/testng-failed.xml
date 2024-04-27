@@ -7,20 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="stage.SignupStage">
+      <class name="prod.Regression">
         <methods>
-          <include name="signUpGoldMonthly"/>
+          <include name="Guestuser"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
         </methods>
-      </class> <!-- stage.SignupStage -->
-      <class name="dev.SignupDev">
-        <methods>
-          <include name="signUpSilver"/>
-          <include name="postConditions"/>
-          <include name="preConditions"/>
-        </methods>
-      </class> <!-- dev.SignupDev -->
+      </class> <!-- prod.Regression -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

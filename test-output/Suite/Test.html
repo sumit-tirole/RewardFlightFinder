@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>28/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>29/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 23 09:46:07 IST 2024</td>
+<td>Started on:</td><td>Sat Apr 27 14:53:29 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1052 seconds (1052537 ms)</td>
+<tr><td>Total time:</td><td>1570 seconds (1570572 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,71 +76,38 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='dev.SignupDev.signUpSilver()'><b>signUpSilver</b><br>Test class: dev.SignupDev<br/>
-<a href="#Output-846072718" onClick='toggleBox("Output-846072718", this, "Show output", "Hide output");'>Show output</a>
+<td title='prod.Regression.Guestuser()'><b>Guestuser</b><br>Test class: prod.Regression<br/>
+<a href="#Output-1519590402" onClick='toggleBox("Output-1519590402", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-846072718" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-846072718">
-<a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signUpSilver_23_04_2024_09_46_52.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signUpSilver_23_04_2024_09_46_52.png' height='100' width='100'/> </a><br/>
+<a href="#Output-1519590402" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1519590402">
+<a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\Guestuser_27_04_2024_03_16_16.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\Guestuser_27_04_2024_03_16_16.png' height='100' width='100'/> </a><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.WebDriverException: no such execution context
-  (Session info: chrome=124.0.6367.61)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;ui scrolling modal transition visible active cst-popup cal-popup footercloudtop&apos;] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ca6d27efc0250bff512cd845b83bf7c9, findElement {value=//button[text()=&apos;I agree&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60787}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60787/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ca6d27efc0250bff512cd845b83bf7c9
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.flightfinder.pomrepo.CreateAlertElements.synchronised(CreateAlertElements.java:25)
-	at com.flightfinder.pomrepo.CreateAlertElements.getAcceptCookies(CreateAlertElements.java:37)
-	at dev.SignupDev.signUpSilver(SignupDev.java:66)
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64921}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64921/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc439b50dfb271c708d5692f25ba34e7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.flightfinder.pomrepo.ProdElements.synchronised(ProdElements.java:24)
+	at com.flightfinder.pomrepo.ProdElements.getGuestUserPopup(ProdElements.java:89)
+	at prod.Regression.Guestuser(Regression.java:265)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace846072718", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace846072718'><pre>org.openqa.selenium.WebDriverException: no such execution context
-  (Session info: chrome=124.0.6367.61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1519590402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1519590402'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;ui scrolling modal transition visible active cst-popup cal-popup footercloudtop&apos;] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ca6d27efc0250bff512cd845b83bf7c9, findElement {value=//button[text()=&apos;I agree&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60787}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60787/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ca6d27efc0250bff512cd845b83bf7c9
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.flightfinder.pomrepo.CreateAlertElements.synchronised(CreateAlertElements.java:25)
-	at com.flightfinder.pomrepo.CreateAlertElements.getAcceptCookies(CreateAlertElements.java:37)
-	at dev.SignupDev.signUpSilver(SignupDev.java:66)
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64921}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64921/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc439b50dfb271c708d5692f25ba34e7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.flightfinder.pomrepo.ProdElements.synchronised(ProdElements.java:24)
+	at com.flightfinder.pomrepo.ProdElements.getGuestUserPopup(ProdElements.java:89)
+	at prod.Regression.Guestuser(Regression.java:265)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -170,105 +137,8 @@ Session ID: ca6d27efc0250bff512cd845b83bf7c9
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>dev.SignupDev@2de366bb</td></tr>
-<tr>
-<td title='stage.SignupStage.signUpGoldMonthly()'><b>signUpGoldMonthly</b><br>Test class: stage.SignupStage<br/>
-<a href="#Output-2060656286" onClick='toggleBox("Output-2060656286", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2060656286" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2060656286">
-<a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signUpGoldMonthly_23_04_2024_09_56_36.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signUpGoldMonthly_23_04_2024_09_56_36.png' height='100' width='100'/> </a><br/>
-</div>
-</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: no such execution context
-  (Session info: chrome=124.0.6367.61)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8cde923b40bf8a7a9dfda77bde48220f, findElement {value=//button[text()=&apos;I agree&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61814}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61814/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8cde923b40bf8a7a9dfda77bde48220f
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.flightfinder.pomrepo.CreateAlertElements.synchronised(CreateAlertElements.java:25)
-	at com.flightfinder.pomrepo.CreateAlertElements.getAcceptCookies(CreateAlertElements.java:37)
-	at stage.SignupStage.signUpGoldMonthly(SignupStage.java:235)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2060656286", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2060656286'><pre>org.openqa.selenium.WebDriverException: no such execution context
-  (Session info: chrome=124.0.6367.61)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8cde923b40bf8a7a9dfda77bde48220f, findElement {value=//button[text()=&apos;I agree&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61814}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61814/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8cde923b40bf8a7a9dfda77bde48220f
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.flightfinder.pomrepo.CreateAlertElements.synchronised(CreateAlertElements.java:25)
-	at com.flightfinder.pomrepo.CreateAlertElements.getAcceptCookies(CreateAlertElements.java:37)
-	at stage.SignupStage.signUpGoldMonthly(SignupStage.java:235)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>3</td>
-<td>stage.SignupStage@3d3f761a</td></tr>
+<td>66</td>
+<td>prod.Regression@3546d80f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -279,144 +149,149 @@ Session ID: 8cde923b40bf8a7a9dfda77bde48220f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='prod.Regression.AppstoreImageCheck()'><b>AppstoreImageCheck</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>6</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='prod.Regression.facebook()'><b>facebook</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>27</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
 <td title='stage.Alerts.createAlert()'><b>createAlert</b><br>Test class: stage.Alerts</td>
 <td></td>
-<td>69</td>
-<td>stage.Alerts@10b892d5</td></tr>
+<td>80</td>
+<td>stage.Alerts@2de366bb</td></tr>
 <tr>
-<td title='prod.Regression.loginValidCredentials()'><b>loginValidCredentials</b><br>Test class: prod.Regression</td>
+<td title='dev.SignupDev.signUpSilver()'><b>signUpSilver</b><br>Test class: dev.SignupDev</td>
 <td></td>
-<td>26</td>
-<td>prod.Regression@3546d80f</td></tr>
+<td>68</td>
+<td>dev.SignupDev@3d3f761a</td></tr>
 <tr>
-<td title='dev.SignupDev.signUpSilverMonthly()'><b>signUpSilverMonthly</b><br>Test class: dev.SignupDev</td>
+<td title='dev.SignupDev.signUpGoldMonthly()'><b>signUpGoldMonthly</b><br>Test class: dev.SignupDev</td>
 <td></td>
-<td>82</td>
-<td>dev.SignupDev@2de366bb</td></tr>
-<tr>
-<td title='prod.Regression.Linkedin()'><b>Linkedin</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>26</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='prod.Regression.signUpBronzeprod()'><b>signUpBronzeprod</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>28</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='stage.Alerts.editAlert()'><b>editAlert</b><br>Test class: stage.Alerts</td>
-<td></td>
-<td>35</td>
-<td>stage.Alerts@10b892d5</td></tr>
-<tr>
-<td title='prod.Regression.Instagram()'><b>Instagram</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>27</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='stage.SignupStage.signUpSilver()'><b>signUpSilver</b><br>Test class: stage.SignupStage</td>
-<td></td>
-<td>59</td>
-<td>stage.SignupStage@3d3f761a</td></tr>
+<td>64</td>
+<td>dev.SignupDev@3d3f761a</td></tr>
 <tr>
 <td title='prod.Regression.popularTopicsCheck()'><b>popularTopicsCheck</b><br>Test class: prod.Regression</td>
 <td></td>
-<td>8</td>
+<td>14</td>
 <td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='stage.SignupStage.signUpGold()'><b>signUpGold</b><br>Test class: stage.SignupStage</td>
-<td></td>
-<td>57</td>
-<td>stage.SignupStage@3d3f761a</td></tr>
 <tr>
 <td title='stage.SignupStage.signUpSilverMonthly()'><b>signUpSilverMonthly</b><br>Test class: stage.SignupStage</td>
 <td></td>
 <td>61</td>
-<td>stage.SignupStage@3d3f761a</td></tr>
+<td>stage.SignupStage@10b892d5</td></tr>
 <tr>
-<td title='prod.Regression.popularBlogsCheck()'><b>popularBlogsCheck</b><br>Test class: prod.Regression</td>
+<td title='prod.Regression.loginInValidCredentials()'><b>loginInValidCredentials</b><br>Test class: prod.Regression</td>
 <td></td>
-<td>9</td>
+<td>43</td>
 <td>prod.Regression@3546d80f</td></tr>
 <tr>
-<td title='stage.SignupStage.signUpBronze()'><b>signUpBronze</b><br>Test class: stage.SignupStage</td>
-<td></td>
-<td>32</td>
-<td>stage.SignupStage@3d3f761a</td></tr>
-<tr>
-<td title='prod.Regression.GooglePlay()'><b>GooglePlay</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>26</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='stage.Alerts.deleteAlert()'><b>deleteAlert</b><br>Test class: stage.Alerts</td>
-<td></td>
-<td>36</td>
-<td>stage.Alerts@10b892d5</td></tr>
-<tr>
-<td title='prod.Regression.KbarHeader()'><b>KbarHeader</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>6</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='dev.SignupDev.signUpGoldMonthly()'><b>signUpGoldMonthly</b><br>Test class: dev.SignupDev</td>
+<td title='stage.SignupStage.signUpGold()'><b>signUpGold</b><br>Test class: stage.SignupStage</td>
 <td></td>
 <td>60</td>
-<td>dev.SignupDev@2de366bb</td></tr>
-<tr>
-<td title='prod.Regression.loginWithFacebook()'><b>loginWithFacebook</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>30</td>
-<td>prod.Regression@3546d80f</td></tr>
+<td>stage.SignupStage@10b892d5</td></tr>
 <tr>
 <td title='prod.Regression.popularArticlesCheck()'><b>popularArticlesCheck</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>20</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.signUpBronzeprod()'><b>signUpBronzeprod</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>31</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.AppstoreImageCheck()'><b>AppstoreImageCheck</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>12</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.Linkedin()'><b>Linkedin</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>25</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='stage.SignupStage.signUpGoldMonthly()'><b>signUpGoldMonthly</b><br>Test class: stage.SignupStage</td>
+<td></td>
+<td>59</td>
+<td>stage.SignupStage@10b892d5</td></tr>
+<tr>
+<td title='stage.Alerts.editAlert()'><b>editAlert</b><br>Test class: stage.Alerts</td>
+<td></td>
+<td>35</td>
+<td>stage.Alerts@2de366bb</td></tr>
+<tr>
+<td title='prod.Regression.Instagram()'><b>Instagram</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>19</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.KbarHeader()'><b>KbarHeader</b><br>Test class: prod.Regression</td>
 <td></td>
 <td>9</td>
 <td>prod.Regression@3546d80f</td></tr>
 <tr>
 <td title='prod.Regression.Applestore()'><b>Applestore</b><br>Test class: prod.Regression</td>
 <td></td>
-<td>28</td>
+<td>17</td>
 <td>prod.Regression@3546d80f</td></tr>
 <tr>
-<td title='prod.Regression.loginInValidCredentials()'><b>loginInValidCredentials</b><br>Test class: prod.Regression</td>
+<td title='dev.SignupDev.signUpBronze()'><b>signUpBronze</b><br>Test class: dev.SignupDev</td>
 <td></td>
-<td>20</td>
+<td>34</td>
+<td>dev.SignupDev@3d3f761a</td></tr>
+<tr>
+<td title='prod.Regression.loginWithFacebook()'><b>loginWithFacebook</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>43</td>
 <td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.Twitter()'><b>Twitter</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>26</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='dev.SignupDev.signUpSilverMonthly()'><b>signUpSilverMonthly</b><br>Test class: dev.SignupDev</td>
+<td></td>
+<td>62</td>
+<td>dev.SignupDev@3d3f761a</td></tr>
+<tr>
+<td title='prod.Regression.GooglePlay()'><b>GooglePlay</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>17</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.loginValidCredentials()'><b>loginValidCredentials</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>29</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='prod.Regression.popularBlogsCheck()'><b>popularBlogsCheck</b><br>Test class: prod.Regression</td>
+<td></td>
+<td>17</td>
+<td>prod.Regression@3546d80f</td></tr>
+<tr>
+<td title='dev.SignupDev.signUpGold()'><b>signUpGold</b><br>Test class: dev.SignupDev</td>
+<td></td>
+<td>60</td>
+<td>dev.SignupDev@3d3f761a</td></tr>
+<tr>
+<td title='stage.SignupStage.signUpSilver()'><b>signUpSilver</b><br>Test class: stage.SignupStage</td>
+<td></td>
+<td>61</td>
+<td>stage.SignupStage@10b892d5</td></tr>
 <tr>
 <td title='prod.Regression.loginWithGoogle()'><b>loginWithGoogle</b><br>Test class: prod.Regression</td>
 <td></td>
 <td>37</td>
 <td>prod.Regression@3546d80f</td></tr>
 <tr>
-<td title='dev.SignupDev.signUpBronze()'><b>signUpBronze</b><br>Test class: dev.SignupDev</td>
+<td title='stage.Alerts.deleteAlert()'><b>deleteAlert</b><br>Test class: stage.Alerts</td>
 <td></td>
-<td>35</td>
-<td>dev.SignupDev@2de366bb</td></tr>
+<td>36</td>
+<td>stage.Alerts@2de366bb</td></tr>
 <tr>
-<td title='dev.SignupDev.signUpGold()'><b>signUpGold</b><br>Test class: dev.SignupDev</td>
+<td title='stage.SignupStage.signUpBronze()'><b>signUpBronze</b><br>Test class: stage.SignupStage</td>
 <td></td>
-<td>60</td>
-<td>dev.SignupDev@2de366bb</td></tr>
+<td>31</td>
+<td>stage.SignupStage@10b892d5</td></tr>
 <tr>
-<td title='prod.Regression.Guestuser()'><b>Guestuser</b><br>Test class: prod.Regression</td>
+<td title='prod.Regression.facebook()'><b>facebook</b><br>Test class: prod.Regression</td>
 <td></td>
-<td>38</td>
-<td>prod.Regression@3546d80f</td></tr>
-<tr>
-<td title='prod.Regression.Twitter()'><b>Twitter</b><br>Test class: prod.Regression</td>
-<td></td>
-<td>27</td>
+<td>17</td>
 <td>prod.Regression@3546d80f</td></tr>
 </table><p>
 </body>

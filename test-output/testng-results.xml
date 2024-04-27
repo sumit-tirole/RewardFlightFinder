@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="17" total="20" passed="3" failed="0" skipped="0">
+<testng-results ignored="17" total="18" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-23T20:18:06 IST" name="Default suite" finished-at="2024-04-23T20:20:36 IST" duration-ms="150412">
+  <suite started-at="2024-04-27T15:48:02 IST" name="Default suite" finished-at="2024-04-27T15:49:45 IST" duration-ms="103121">
     <groups>
     </groups>
-    <test started-at="2024-04-23T20:18:06 IST" name="Default test" finished-at="2024-04-23T20:20:36 IST" duration-ms="150412">
+    <test started-at="2024-04-27T15:48:02 IST" name="Default test" finished-at="2024-04-27T15:49:45 IST" duration-ms="103121">
       <class name="prod.Regression">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:18:06 IST" name="preConditions" finished-at="2024-04-23T20:18:08 IST" duration-ms="2243" status="PASS">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@482d776b]" started-at="2024-04-27T15:48:02 IST" name="preConditions" finished-at="2024-04-27T15:48:05 IST" duration-ms="2652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="loginValidCredentials()[pri:2, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:18:08 IST" name="loginValidCredentials" finished-at="2024-04-23T20:18:36 IST" duration-ms="27723" status="PASS">
+        <test-method signature="Guestuser()[pri:12, instance:prod.Regression@482d776b]" started-at="2024-04-27T15:48:05 IST" name="Guestuser" finished-at="2024-04-27T15:49:35 IST" duration-ms="90289" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='ui scrolling modal transition visible active cst-popup cal-popup footercloudtop'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50187}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50187/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ce58a5a63e20fb03d89aa3d40d3bbe4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='ui scrolling modal transition visible active cst-popup cal-popup footercloudtop'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50187}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50187/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ce58a5a63e20fb03d89aa3d40d3bbe4
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.flightfinder.pomrepo.ProdElements.synchronised(ProdElements.java:24)
+at com.flightfinder.pomrepo.ProdElements.getGuestUserPopup(ProdElements.java:89)
+at prod.Regression.Guestuser(Regression.java:271)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginValidCredentials -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:18:36 IST" name="postConditions" finished-at="2024-04-23T20:18:38 IST" duration-ms="1648" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postConditions -->
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:18:38 IST" name="preConditions" finished-at="2024-04-23T20:18:39 IST" duration-ms="1006" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preConditions -->
-        <test-method signature="loginValidCredentials()[pri:2, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:18:39 IST" name="loginValidCredentials" finished-at="2024-04-23T20:19:28 IST" duration-ms="49414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidCredentials -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:19:28 IST" name="postConditions" finished-at="2024-04-23T20:19:30 IST" duration-ms="1537" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postConditions -->
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:19:30 IST" name="preConditions" finished-at="2024-04-23T20:19:31 IST" duration-ms="1155" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preConditions -->
-        <test-method signature="loginValidCredentials()[pri:2, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:19:31 IST" name="loginValidCredentials" finished-at="2024-04-23T20:20:34 IST" duration-ms="63655" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidCredentials -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@4052274f]" started-at="2024-04-23T20:20:34 IST" name="postConditions" finished-at="2024-04-23T20:20:36 IST" duration-ms="1948" status="PASS">
+        </test-method> <!-- Guestuser -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@482d776b]" started-at="2024-04-27T15:49:35 IST" name="postConditions" finished-at="2024-04-27T15:49:45 IST" duration-ms="10067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->

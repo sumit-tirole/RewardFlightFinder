@@ -42,31 +42,42 @@ public class GoogleLogin {
 
 	}
 	
-	@FindBy(xpath="//input[@aria-label='Email or phone']")
+	@FindBy(xpath="//input[@type='email']")
 	WebElement googleEmailTextField;
 
 
 	public WebElement getGoogleEmailTextField() {
-		synchronised(By.xpath("//input[@aria-label='Email or phone']"),googleEmailTextField);
+		synchronised(By.xpath("//input[@type='email']"),googleEmailTextField);
 		return googleEmailTextField;
 	}
 	
-	@FindBy(xpath="//button//span[text()='Next']")
+	@FindBy(xpath="//*[@id=\"identifierNext\"]")
 	WebElement nextButton;
 
 
 	public WebElement getNextButton() {
-		synchronised(By.xpath("//button//span[text()='Next']"),nextButton);
+		synchronised(By.xpath("//*[@id=\"identifierNext\"]"),nextButton);
 		return nextButton;
 	}
 	
-	@FindBy(xpath="//input[@name='Passwd']")
+	@FindBy(xpath="//*[@id=\"password\"]")
 	WebElement passwordTextField;
 
 
 	public WebElement getPasswordTextField() {
-		synchronised(By.xpath("//input[@name='Passwd']"),passwordTextField);
+		synchronised(By.xpath("//*[@id=\"password\"]"),passwordTextField);
 		return passwordTextField;
 	}
+	
+	@FindBy(xpath="//*[@id=\"passwordNext\"]")
+	WebElement passwordNext;
+
+
+	public WebElement getPasswordNext() {
+		synchronised(By.xpath("//*[@id=\"passwordNext\"]"),passwordNext);
+		return passwordNext;
+	}
+	
+	
 	
 }

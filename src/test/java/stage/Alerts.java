@@ -32,7 +32,7 @@ public class Alerts extends BaseClass {
 	public Logger log = LogManager.getLogger(Alerts.class);
 	
 	
-		
+	
 	@Test(priority=1, enabled = true)
 	public void createAlert() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}

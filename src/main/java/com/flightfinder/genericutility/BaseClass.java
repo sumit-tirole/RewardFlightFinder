@@ -1,7 +1,8 @@
 package com.flightfinder.genericutility;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,16 +24,20 @@ public class BaseClass {
 	@BeforeMethod
 	public void preConditions() throws Throwable{
 //		ScreenRecorderUtil.startRecord("preConditions");
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	    int screenWidth = (int) screenSize.getWidth();
+	    int screenHeight = (int) screenSize.getHeight();
+	    String windowSize = screenWidth + "," + screenHeight;
+	    
 		String browserName = fileUtils.readFromPropertyFile("browser");
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--remote-allow-origins=*");
 	        options.addArguments("--headless");
 	        options.addArguments("--disable-extensions"); // disabling extensions
-	        options.addArguments("--disable-gpu"); // applicable to windows os only
 	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 	        options.addArguments("--no-sandbox");
-//	        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver");
+	        options.addArguments("--window-size=" + windowSize);
 //	        System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\chromedriver.exe");
 			driver = new ChromeDriver(options);
 			}
@@ -45,6 +50,7 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(5));
 		
+	    
 		}
 		
 	//Executing after test
