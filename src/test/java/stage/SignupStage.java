@@ -20,7 +20,7 @@ public class SignupStage extends BaseClass {
 	public Logger log = LogManager.getLogger(SignupStage.class);
 		
 	@Test(priority=1, enabled = true)
-	public void signUpBronze() throws Throwable {
+	public void signup_Bronze_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the Url");
@@ -57,7 +57,7 @@ public class SignupStage extends BaseClass {
         }
 	
 	@Test(priority=2, enabled = true)
-	public void signUpSilver() throws Throwable {
+	public void signup_SilverYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -113,7 +113,7 @@ public class SignupStage extends BaseClass {
 	}
 	
 	@Test(priority=3, enabled = true)
-	public void signUpGold() throws Throwable {
+	public void signup_GoldYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -168,7 +168,7 @@ public class SignupStage extends BaseClass {
 	}
 	
 	@Test(priority=4, enabled = true)
-	public void signUpSilverMonthly() throws Throwable {
+	public void signup_SilverMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -226,7 +226,7 @@ public class SignupStage extends BaseClass {
 	}
 	
 	@Test(priority=5, enabled = true)
-	public void signUpGoldMonthly() throws Throwable {
+	public void signup_GoldMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");

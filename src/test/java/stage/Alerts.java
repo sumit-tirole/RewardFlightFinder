@@ -34,7 +34,7 @@ public class Alerts extends BaseClass {
 	
 	
 	@Test(priority=1, enabled = true)
-	public void createAlert() throws Throwable {
+	public void create_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -68,7 +68,7 @@ public class Alerts extends BaseClass {
 	
 	
 	@Test(priority=2, enabled = true)
-	public void editAlert() throws Throwable {
+	public void edit_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -91,7 +91,7 @@ public class Alerts extends BaseClass {
 	}
 	
 	@Test(priority=3, enabled = true)
-	public void deleteAlert() throws Throwable {
+	public void delete_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);

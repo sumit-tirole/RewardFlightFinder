@@ -20,7 +20,7 @@ public class SignupDev extends BaseClass {
 	public Logger log = LogManager.getLogger(SignupDev.class);
 		
 	@Test(priority=1, enabled = true)
-	public void signUpBronze() throws Throwable {
+	public void signup_Bronze_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the Url");
@@ -57,7 +57,7 @@ public class SignupDev extends BaseClass {
         }
 	
 	@Test(priority=2, enabled = true)
-	public void signUpSilver() throws Throwable {
+	public void signup_SilverYearly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -113,7 +113,7 @@ public class SignupDev extends BaseClass {
 	}
 	
 	@Test(priority=3, enabled = true)
-	public void signUpGold() throws Throwable {
+	public void signup_GoldYearly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -168,7 +168,7 @@ public class SignupDev extends BaseClass {
 	}
 	
 	@Test(priority=4, enabled = true)
-	public void signUpSilverMonthly() throws Throwable {
+	public void signup_SilverMonthly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");
@@ -226,7 +226,7 @@ public class SignupDev extends BaseClass {
 	}
 	
 	@Test(priority=5, enabled = true)
-	public void signUpGoldMonthly() throws Throwable {
+	public void signup_GoldMonthly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
 		log.info("Navigated to the url");

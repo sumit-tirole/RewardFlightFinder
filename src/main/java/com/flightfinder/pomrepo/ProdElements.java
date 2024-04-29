@@ -82,11 +82,11 @@ public class ProdElements {
 		return appStoreImage;
 	}
 	
-	@FindBy(xpath="//div[@class='ui scrolling modal transition visible active cst-popup cal-popup footercloudtop']")
+	@FindBy(xpath="//div/h2[@class='cal-popup-heading']")
 	WebElement guestUserPopup;
 	
 	public WebElement getGuestUserPopup() {
-		synchronised(By.xpath("//div[@class='ui scrolling modal transition visible active cst-popup cal-popup footercloudtop']"),guestUserPopup);
+		synchronised(By.xpath("//div/h2[@class='cal-popup-heading']"),guestUserPopup);
 		return guestUserPopup;
 	}
 	

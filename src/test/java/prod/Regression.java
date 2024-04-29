@@ -32,7 +32,7 @@ public class Regression extends BaseClass {
 	
 		
 	@Test(priority=1, enabled = true)
-	public void loginInValidCredentials() throws Throwable {
+	public void login_Invalid_Credentials_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -45,7 +45,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=2, enabled = true)
-	public void loginValidCredentials() throws Throwable {
+	public void login_Valid_Credentials_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -60,7 +60,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=3, enabled = true)
-	public void loginWithGoogle() throws Throwable {
+	public void login_With_Google_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -97,7 +97,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=4, enabled = true) 
-	public void loginWithFacebook() throws Throwable{
+	public void login_With_Facebook_Prod() throws Throwable{
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -134,7 +134,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(enabled = false, priority=5) 
-	public void loginWithApple() throws Throwable{
+	public void login_With_Apple_Prod() throws Throwable{
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -174,7 +174,7 @@ public class Regression extends BaseClass {
 		
 	
 	@Test(priority=6 , enabled=true)
-	public void signUpBronzeprod() throws Throwable {
+	public void signup_Bronze_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("bronzeurl"));}
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
@@ -194,7 +194,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=7 , enabled=true)
-	public void popularArticlesCheck() throws Throwable {
+	public void popularArticles_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
@@ -207,7 +207,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=8 , enabled=true)
-	public void popularTopicsCheck() throws Throwable {
+	public void popularTopics_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
@@ -220,7 +220,7 @@ public class Regression extends BaseClass {
 	}
 	
 	@Test(priority=9 , enabled=true)
-	public void popularBlogsCheck() throws Throwable {
+	public void popularBlogs_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
@@ -232,7 +232,7 @@ public class Regression extends BaseClass {
 		
 	}
 	@Test(priority=10 , enabled=true)
-	public void AppstoreImageCheck() throws Throwable {
+	public void AppstoreImage_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
 		catch(WebDriverException e) {}
@@ -244,7 +244,7 @@ public class Regression extends BaseClass {
 	}
 	
 @Test(priority=11 , enabled=true)
-public void KbarHeader() throws Throwable {
+public void KbarHeaderProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -253,8 +253,8 @@ public void KbarHeader() throws Throwable {
 	
 }
 
-@Test(priority=12 , enabled=true,invocationCount = 10)
-public void Guestuser() throws Throwable {
+@Test(priority=12 , enabled=true)
+public void GuestuserProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
@@ -275,7 +275,7 @@ public void Guestuser() throws Throwable {
 }
 
 @Test(priority=13 , enabled=true)
-public void facebook() throws Throwable {
+public void facebookProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -300,7 +300,7 @@ public void facebook() throws Throwable {
 
 
 @Test(priority=14 , enabled=true)
-public void Twitter() throws Throwable {
+public void TwitterProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -325,7 +325,7 @@ public void Twitter() throws Throwable {
 
 
 @Test(priority=15 , enabled=true)
-public void Linkedin() throws Throwable {
+public void LinkedinProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -350,7 +350,7 @@ public void Linkedin() throws Throwable {
 }
 
 @Test(priority=16 , enabled=true)
-public void Instagram() throws Throwable {
+public void InstagramProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -376,7 +376,7 @@ public void Instagram() throws Throwable {
 
 
 @Test(priority=17 , enabled=true)
-public void GooglePlay() throws Throwable {
+public void GooglePlayProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
@@ -400,7 +400,7 @@ public void GooglePlay() throws Throwable {
 
 
 @Test(priority=18 , enabled=true)
-public void Applestore() throws Throwable {
+public void ApplestoreProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
 	catch(WebDriverException e) {}
