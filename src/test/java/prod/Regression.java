@@ -253,7 +253,7 @@ public void KbarHeader() throws Throwable {
 	
 }
 
-@Test(priority=12 , enabled=true)
+@Test(priority=12 , enabled=true,invocationCount = 10)
 public void Guestuser() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
@@ -266,9 +266,12 @@ public void Guestuser() throws Throwable {
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0, 1500)");
-	Assert.assertEquals(element1.getGuestUserPopup().isDisplayed(), true);
-
+	js.executeScript("window.scrollBy(0, 1000)");
+	Thread.sleep(3000);
+	String popupActualText = element1.getGuestUserPopup().getText();
+	String popupExpectedText = "Create a free account to see a full year ahead";
+	Assert.assertEquals(popupActualText, popupExpectedText);
+	
 }
 
 @Test(priority=13 , enabled=true)
