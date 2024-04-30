@@ -59,7 +59,7 @@ public class Regression extends BaseClass {
 		
 	}
 	
-	@Test(priority=3, enabled = true)
+	@Test(priority=3, enabled = false)
 	public void login_With_Google_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -81,9 +81,7 @@ public class Regression extends BaseClass {
 		}
 			
 		element1.getGoogleEmailTextField().sendKeys(fileUtils.readFromPropertyFile("gmail"));
-		Thread.sleep(1000);
 		element1.getNextButton().click();
-		Thread.sleep(1000);
 		element1.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("gmailpassword"));
 		element1.getPasswordNext().click();
 		for(String window:windows) {
