@@ -5,9 +5,9 @@
     <classes>
       <class name="prod.Regression">
         <methods>
-          <include name="GuestuserProd"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
+          <include name="login_With_Google_Prod"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>

@@ -9,8 +9,9 @@
     <classes>
       <class name="prod.Regression">
         <methods>
-          <include name="Guestuser"/>
+          <include name="ApplestoreProd"/>
           <include name="postConditions"/>
+          <include name="login_With_Google_Prod"/>
           <include name="preConditions"/>
         </methods>
       </class> <!-- prod.Regression -->

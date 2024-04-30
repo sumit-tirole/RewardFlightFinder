@@ -34,7 +34,7 @@ public class SignupStage extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getBronzeSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked bronze subscribe button");
-		element.getEmailTextField().sendKeys("TestSeleniumBronzeStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestBronzeStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -71,7 +71,7 @@ public class SignupStage extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getSilverSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked silver subscribe button");
-		element.getEmailTextField().sendKeys("TestSeleniumSilverStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestSilverStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -127,7 +127,7 @@ public class SignupStage extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getGoldSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked gold subscribe button");
-		element.getEmailTextField().sendKeys("TestSeleniumGoldStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestGoldStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -184,7 +184,7 @@ public class SignupStage extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getSilverSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked silver subscribe button");
-		element.getEmailTextField().sendKeys("TestSeleniumSilverMonthlyStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestSilverMonthlyStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -242,7 +242,7 @@ public class SignupStage extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getGoldSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked gold subscribe button");
-		element.getEmailTextField().sendKeys("TestSeleniumGoldMonthlyStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestGoldMonthlyStage"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");

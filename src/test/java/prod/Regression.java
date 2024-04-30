@@ -73,7 +73,6 @@ public class Regression extends BaseClass {
 		
 		for(String window:windows) {
 			driver.switchTo().window(window);
-			System.out.println(window);
 			if(driver.getCurrentUrl().equals("https://rewardflightfinder.com/")) {
 			}
 			else {
@@ -82,7 +81,9 @@ public class Regression extends BaseClass {
 		}
 			
 		element1.getGoogleEmailTextField().sendKeys(fileUtils.readFromPropertyFile("gmail"));
+		Thread.sleep(1000);
 		element1.getNextButton().click();
+		Thread.sleep(1000);
 		element1.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("gmailpassword"));
 		element1.getPasswordNext().click();
 		for(String window:windows) {
@@ -180,7 +181,7 @@ public class Regression extends BaseClass {
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
 		element1.getAcceptCookies().click();
-		element.getEmailTextField().sendKeys("TestSeleniumBronze"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		element.getEmailTextField().sendKeys("TestBronzeProd"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
         element.getContinueButton().click();
         element.getPasswordTextField().sendKeys("Test@123");
         element.getConfirmPasswordTextField().sendKeys("Test@123");
@@ -264,7 +265,9 @@ public void GuestuserProd() throws Throwable {
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	if(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']")).isDisplayed()) {
 	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+	}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("window.scrollBy(0, 1000)");
 	Thread.sleep(3000);

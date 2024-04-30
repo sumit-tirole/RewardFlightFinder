@@ -60,12 +60,12 @@ public class GoogleLogin {
 		return nextButton;
 	}
 	
-	@FindBy(xpath="//*[@id=\"password\"]")
+	@FindBy(xpath="//*[@id=\"password\"]//input")
 	WebElement passwordTextField;
 
 
 	public WebElement getPasswordTextField() {
-		synchronised(By.xpath("//*[@id=\"password\"]"),passwordTextField);
+		synchronised(By.xpath("//*[@id=\"password\"]//input"),passwordTextField);
 		return passwordTextField;
 	}
 	
