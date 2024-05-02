@@ -9,12 +9,12 @@
 
   <test thread-count="5" name="Test">
     <classes>
+      <class name="dev.SignupDev"></class>
+      <class name="prod.Alerts"></class>  
+      <class name="prod.Regression"></class>
       <class name="stage.Alerts"></class>
       <class name="stage.SignupStage"></class>
-      <class name="dev.SignupDev"></class>
-      <class name="prod.Regression"></class>  
-      
-       </classes>
+    </classes>
   </test> <!-- Test -->
   
   
