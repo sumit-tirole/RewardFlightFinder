@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="19" total="20" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-01T19:28:27 IST" name="Suite" finished-at="2024-05-01T19:31:17 IST" duration-ms="169700">
+  <suite started-at="2024-05-04T10:51:29 IST" name="Suite" finished-at="2024-05-04T10:52:43 IST" duration-ms="73661">
     <groups>
     </groups>
-    <test started-at="2024-05-01T19:28:27 IST" name="Test" finished-at="2024-05-01T19:31:17 IST" duration-ms="169700">
-      <class name="prod.Alerts">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:28:28 IST" name="preConditions" finished-at="2024-05-01T19:28:29 IST" duration-ms="1922" status="PASS">
+    <test started-at="2024-05-04T10:51:29 IST" name="Test" finished-at="2024-05-04T10:52:43 IST" duration-ms="73661">
+      <class name="prod.Regression">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:51:29 IST" name="preConditions" finished-at="2024-05-04T10:51:32 IST" duration-ms="2231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="create_Alert_Prod()[pri:1, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:28:29 IST" name="create_Alert_Prod" finished-at="2024-05-01T19:29:52 IST" duration-ms="82200" status="PASS">
+        <test-method signature="Check_bronze_mapPage_restrictions()[pri:20, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:51:32 IST" name="Check_bronze_mapPage_restrictions" finished-at="2024-05-04T10:52:41 IST" duration-ms="69813" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create_Alert_Prod -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:29:52 IST" name="postConditions" finished-at="2024-05-01T19:29:53 IST" duration-ms="1386" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postConditions -->
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:29:53 IST" name="preConditions" finished-at="2024-05-01T19:29:54 IST" duration-ms="1258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preConditions -->
-        <test-method signature="edit_Alert_Prod()[pri:2, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:29:54 IST" name="edit_Alert_Prod" finished-at="2024-05-01T19:30:33 IST" duration-ms="38784" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_Alert_Prod -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:30:33 IST" name="postConditions" finished-at="2024-05-01T19:30:34 IST" duration-ms="1292" status="PASS">
+        </test-method> <!-- Check_bronze_mapPage_restrictions -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:52:41 IST" name="postConditions" finished-at="2024-05-04T10:52:43 IST" duration-ms="1552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:30:34 IST" name="preConditions" finished-at="2024-05-01T19:30:36 IST" duration-ms="1396" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preConditions -->
-        <test-method signature="delete_Alert_Prod()[pri:3, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:30:36 IST" name="delete_Alert_Prod" finished-at="2024-05-01T19:31:16 IST" duration-ms="40101" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete_Alert_Prod -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@2755d705]" started-at="2024-05-01T19:31:16 IST" name="postConditions" finished-at="2024-05-01T19:31:17 IST" duration-ms="1289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postConditions -->
-      </class> <!-- prod.Alerts -->
+      </class> <!-- prod.Regression -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

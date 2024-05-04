@@ -24,6 +24,9 @@ import com.flightfinder.pomrepo.FacebookLogin;
 import com.flightfinder.pomrepo.GoogleLogin;
 import com.flightfinder.pomrepo.SignUpElements;
 
+import listeners.ExtentReportListener;
+import listeners.ScreenshotUtility;
+
 
 
 public class Alerts extends BaseClass {
@@ -61,6 +64,8 @@ public class Alerts extends BaseClass {
 		element.getCreateAlertButtonPopup().click();
 		System.out.println(element.getAlertmsg().getText());
 		outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert created validation");
 		element.getCloseAlertPopup().click();
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
@@ -86,6 +91,8 @@ public class Alerts extends BaseClass {
 		element2.getAddPassengersButton().click();
 		element2.getSaveButton().click();
 		System.out.println(element2.getConfirmEditAlert().getText());
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert Edited validation");
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 	}
@@ -108,6 +115,8 @@ public class Alerts extends BaseClass {
 		element1.getDeleteButton().click();
 		element1.getDeleteButton().click();
 		System.out.println(element.getAlertmsg().getText());
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert deleted validation");
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 		}

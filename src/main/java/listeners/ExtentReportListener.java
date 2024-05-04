@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -131,7 +132,16 @@ System.out.println((result.getMethod().getMethodName() + " failed!"));
 		return calendar.getTime();
 	}
 
+	public static void logMessage(String message) throws IOException {
+		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+        String logMessage = timestamp + " - " + message;
+        test.get().info(logMessage);
+    }
 	
-	
+	public static void screenshot(String screenshotPath1,String message) throws IOException {
+		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+        test.get().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath1).build());
+        
+    }
 	
 }

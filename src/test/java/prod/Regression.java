@@ -2,6 +2,7 @@ package prod;
 
 import java.time.Duration;
 import java.util.Set;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -13,14 +14,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.AppleLogin;
 import com.flightfinder.pomrepo.CreateAlertElements;
 import com.flightfinder.pomrepo.FacebookLogin;
 import com.flightfinder.pomrepo.GoogleLogin;
+import com.flightfinder.pomrepo.MapPage;
 import com.flightfinder.pomrepo.ProdElements;
 import com.flightfinder.pomrepo.SignUpElements;
+
+import listeners.ExtentReportListener;
+import listeners.ScreenshotUtility;
 
 
 
@@ -41,7 +47,8 @@ public class Regression extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys("ABC@123");
 		element.getSignInButton().click();
-		
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Invalid Login validation");
 	}
 	
 	@Test(priority=2, enabled = true)
@@ -55,6 +62,8 @@ public class Regression extends BaseClass {
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
 		element.getSignInButton().click();
 		element.getAccountButton().click();
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Valid Login validation");
 		element.getLogoutButton().click();
 		
 	}
@@ -128,6 +137,8 @@ public class Regression extends BaseClass {
 		}
 		
 		element.getAccountButton().click();
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Facebook Login validation");
 		element.getLogoutButton().click();
 		
 	}
@@ -188,6 +199,8 @@ public class Regression extends BaseClass {
         element.getLastNameTextField().sendKeys("Testing");
         element.getSignUpButton2().click();
         System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for Bronze signup validation");
         element.getContinueAfterSignUpButton().click();
 	
 	}
@@ -202,7 +215,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
-		
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for popular articles validation");
 	}
 	
 	@Test(priority=8 , enabled=true)
@@ -215,7 +229,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularTopics().isDisplayed(), true);
-		
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for popular topics validation");
 	}
 	
 	@Test(priority=9 , enabled=true)
@@ -228,7 +243,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularBlogs().isDisplayed(), true);
-		
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for popular blogs validation");
 	}
 	@Test(priority=10 , enabled=true)
 	public void AppstoreImage_Check_Prod() throws Throwable {
@@ -239,6 +255,8 @@ public class Regression extends BaseClass {
 		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
 		Assert.assertEquals(element1.getAppstoreImage().isDisplayed(), true);
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Appstore image validation");
 	
 	}
 	
@@ -249,7 +267,8 @@ public void KbarHeaderProd() throws Throwable {
 	catch(WebDriverException e) {}
 	ProdElements element = new ProdElements(driver);
 	Assert.assertEquals(element.getKbar().isDisplayed(), true);
-	
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for Kbar header validation");
 }
 
 @Test(priority=12 , enabled=true)
@@ -272,7 +291,8 @@ public void GuestuserProd() throws Throwable {
 	String popupActualText = element1.getGuestUserPopup().getText();
 	String popupExpectedText = "Create a free account to see a full year ahead";
 	Assert.assertEquals(popupActualText, popupExpectedText);
-	
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for guest user restrictions");
 }
 
 @Test(priority=13 , enabled=true)
@@ -296,6 +316,8 @@ public void facebookProd() throws Throwable {
 		else {break;}
 	}
 	Assert.assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/rewardflightfinder/");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for facebook redirection validation");
 }
 
 
@@ -322,6 +344,8 @@ public void TwitterProd() throws Throwable {
 	String twitterurl = driver.getCurrentUrl();
 	Assert.assertTrue(twitterurl.contains("https://twitter.com"), "url does not contain https://twitter.com");
 	Assert.assertTrue(twitterurl.contains("rewardflightfdr"), "url does not contain rewardflightfdr");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for twitter redirection validation");
 }
 
 
@@ -348,6 +372,8 @@ public void LinkedinProd() throws Throwable {
 	String linkedinurl = driver.getCurrentUrl();
 	System.out.println(linkedinurl);
 	Assert.assertEquals(linkedinurl, "https://www.linkedin.com/company/reward-flight-finder/");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for linkedin redirection validation");
 }
 
 @Test(priority=16 , enabled=true)
@@ -372,6 +398,8 @@ public void InstagramProd() throws Throwable {
 	}
 	
 	Assert.assertEquals(driver.getCurrentUrl(), "https://www.instagram.com/rewardflightfinder/");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for instagram redirection validation");
 }
 
 
@@ -397,6 +425,8 @@ public void GooglePlayProd() throws Throwable {
 		else {break;}
 	}
 	Assert.assertEquals(driver.getCurrentUrl(), "https://play.google.com/store/apps/details?id=com.rewardflightfinder.app.android");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for Playstore redirection validation");
 }
 
 
@@ -420,8 +450,77 @@ public void ApplestoreProd() throws Throwable {
 		else {break;}
 	}
 		Assert.assertEquals(driver.getCurrentUrl(), "https://apps.apple.com/us/app/reward-flight-finder/id1467629555");
+		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+		ExtentReportListener.screenshot(screenshotPath1,"SS for Apple store redirection validation");
 	}
 	
+	
+@Test(priority=19 , enabled=true)
+public void Check_Map_Page_Destinations() throws Throwable {
+	try {driver.get(fileUtils.readFromPropertyFile("url"));
+	}
+	catch(WebDriverException e) {}
+	CreateAlertElements element = new CreateAlertElements(driver);
+	MapPage element1 = new MapPage(driver);
+	element.getAcceptCookies().click();
+	element.getSignInLink().click();
+	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
+	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
+	element.getSignInButton().click();
+	element1.getWorldMapButton().click();
+	Actions action = new Actions(driver);
+	Thread.sleep(1000);
+	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
+	element1.getDateField().click();
+	element1.getNextMonth().click();
+	element1.getStartDate().click();
+	element1.getEndDate().click();
+	element1.getStartDate().click();
+	element1.getEndDate().click();
+	element1.getSetDatesButton().click();
+	element1.getSearchButton().click();
+	int destinationNumber = java.util.concurrent.ThreadLocalRandom.current().nextInt(1, 101);
+	element1.getSelectDestination(destinationNumber).click();
+	Thread.sleep(3000);
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"SS for Map page zoom in validation");
+	element.getAccountButton().click();
+	element.getLogoutButton().click();
+	}
+	
+@Test(priority=20 , enabled=true)
+public void Check_bronze_mapPage_restrictions() throws Throwable {
+	try {driver.get(fileUtils.readFromPropertyFile("url"));
+	}
+	catch(WebDriverException e) {}
+	CreateAlertElements element = new CreateAlertElements(driver);
+	MapPage element1 = new MapPage(driver);
+	element.getAcceptCookies().click();
+	element.getSignInLink().click();
+	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
+	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
+	element.getSignInButton().click();
+	element1.getWorldMapButton().click();
+	Actions action = new Actions(driver);
+	Thread.sleep(1000);
+	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
+	element1.getDateField().click();
+	element1.getNextMonth().click();
+	element1.getStartDate().click();
+	element1.getEndDate().click();
+	element1.getStartDate().click();
+	element1.getEndDate().click();
+	element1.getSetDatesButton().click();
+	element1.getSearchButton().click();
+	Assert.assertEquals(element1.getUpgradeMembershipPopup().getText(),"You need to be a Silver or Gold member to use the world map search");
+	Assert.assertEquals(element1.getMembershipsButton().isDisplayed(),true);
+	System.out.println(element1.getUpgradeMembershipPopup().getText());
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	element1.getCloseButton().click();
+	element.getAccountButton().click();
+	element.getLogoutButton().click();
+	ExtentReportListener.screenshot(screenshotPath1,"SS for Upgrade membership validation");
+}
 
 }
 	

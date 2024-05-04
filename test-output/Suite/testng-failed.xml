@@ -9,10 +9,9 @@
     <classes>
       <class name="prod.Regression">
         <methods>
-          <include name="ApplestoreProd"/>
           <include name="postConditions"/>
-          <include name="login_With_Google_Prod"/>
           <include name="preConditions"/>
+          <include name="Check_bronze_mapPage_restrictions"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>

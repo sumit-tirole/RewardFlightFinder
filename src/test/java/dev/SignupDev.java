@@ -13,6 +13,9 @@ import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.CreateAlertElements;
 import com.flightfinder.pomrepo.SignUpElements;
 
+import listeners.ExtentReportListener;
+import listeners.ScreenshotUtility;
+
 
 public class SignupDev extends BaseClass {
 	FileUtility fileUtils = new FileUtility();
@@ -50,6 +53,8 @@ public class SignupDev extends BaseClass {
         log.info("Entered last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for Bronze signup validation");
         System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         element.getContinueAfterSignUpButton().click();
         log.info("Closed the browser");
@@ -107,6 +112,8 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for silver yearly signup validation");
         System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
@@ -162,6 +169,8 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold yearly signup  validation");
         System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
@@ -220,6 +229,8 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for Silver monthly signup validation");
         System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
@@ -278,6 +289,8 @@ public class SignupDev extends BaseClass {
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
         System.out.println(element.getConfirmSilverSignup().getText());
+        String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+    	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold monthly validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
 	}
