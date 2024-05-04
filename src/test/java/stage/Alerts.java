@@ -1,29 +1,21 @@
 package stage;
 
 import java.time.Duration;
-import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
-import com.flightfinder.pomrepo.AppleLogin;
 import com.flightfinder.pomrepo.CreateAlertElements;
 import com.flightfinder.pomrepo.DeleteAlertElements;
 import com.flightfinder.pomrepo.EditAlertElements;
-import com.flightfinder.pomrepo.FacebookLogin;
-import com.flightfinder.pomrepo.GoogleLogin;
-import com.flightfinder.pomrepo.SignUpElements;
-
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
 
@@ -65,7 +57,7 @@ public class Alerts extends BaseClass {
 		System.out.println(element.getAlertmsg().getText());
 		outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert created validation");
+		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert created validation");
 		element.getCloseAlertPopup().click();
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
@@ -92,7 +84,7 @@ public class Alerts extends BaseClass {
 		element2.getSaveButton().click();
 		System.out.println(element2.getConfirmEditAlert().getText());
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert Edited validation");
+		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert Edited validation");
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 	}
@@ -116,7 +108,7 @@ public class Alerts extends BaseClass {
 		element1.getDeleteButton().click();
 		System.out.println(element.getAlertmsg().getText());
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-		ExtentReportListener.screenshot(screenshotPath1,"SS for Alert Deleted validation");
+		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert Deleted validation");
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 		}

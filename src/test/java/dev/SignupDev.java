@@ -56,7 +56,7 @@ public class SignupDev extends BaseClass {
         log.info("Clicked signup button");
         System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-    	ExtentReportListener.screenshot(screenshotPath1,"SS for Bronze signup validation");
+    	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Bronze signup validation");
         element.getContinueAfterSignUpButton().click();
         log.info("Closed the browser");
         ExtentReportListener.logMessage("Email: "+email);
@@ -116,7 +116,7 @@ public class SignupDev extends BaseClass {
         log.info("Clicked subscribe button");
         System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-    	ExtentReportListener.screenshot(screenshotPath1,"SS for silver yearly signup validation");
+    	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver yearly signup validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
         ExtentReportListener.logMessage("Email: "+email);
@@ -175,7 +175,7 @@ public class SignupDev extends BaseClass {
         log.info("Clicked subscribe button");
         System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-    	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold yearly signup  validation");
+    	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold yearly signup  validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
         ExtentReportListener.logMessage("Email: "+email);
@@ -237,7 +237,7 @@ public class SignupDev extends BaseClass {
         log.info("Clicked subscribe button");
         System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-    	ExtentReportListener.screenshot(screenshotPath1,"SS for Silver monthly signup validation");
+    	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Silver monthly signup validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
         ExtentReportListener.logMessage("Email: "+email);
@@ -298,7 +298,7 @@ public class SignupDev extends BaseClass {
         log.info("Clicked subscribe button");
         System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-    	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold monthly validation");
+    	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold monthly validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
         ExtentReportListener.logMessage("Email: "+email);
