@@ -11,6 +11,10 @@
     <classes>
      	
       <class name="dev.SignupDev"></class>
+      <class name="prod.Regression"></class>
+      <class name="prod.Alerts"></class>
+      <class name="stage.SignupStage"></class>
+      <class name="stage.Alerts"></class>
   
    </classes>
   </test> <!-- Test -->
