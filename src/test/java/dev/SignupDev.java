@@ -37,7 +37,8 @@ public class SignupDev extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getBronzeSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked bronze subscribe button");
-		element.getEmailTextField().sendKeys("TestBronzeDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestBronzeDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -47,18 +48,18 @@ public class SignupDev extends BaseClass {
         log.info("Entered password again");
         element.getSetPassword().click();
         log.info("Clicked set password button");
-        element.getFirstNameTextField().sendKeys("John");
+        element.getFirstNameTextField().sendKeys("Dev");
         log.info("Entered first name");
-        element.getLastNameTextField().sendKeys("Doe");
+        element.getLastNameTextField().sendKeys("Bronze");
         log.info("Entered last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
+        System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"SS for Bronze signup validation");
-        System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         element.getContinueAfterSignUpButton().click();
         log.info("Closed the browser");
-        
+        ExtentReportListener.logMessage("Email: "+email);
         }
 	
 	@Test(priority=2, enabled = true)
@@ -76,7 +77,8 @@ public class SignupDev extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getSilverSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked silver subscribe button");
-		element.getEmailTextField().sendKeys("TestSilverDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestSilverDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -86,9 +88,9 @@ public class SignupDev extends BaseClass {
         log.info("Entered password again");
         element.getSetPassword().click();
         log.info("Clicked set password button");
-        element.getFirstNameTextField().sendKeys("John");
+        element.getFirstNameTextField().sendKeys("Dev");
         log.info("Entered first name");
-        element.getLastNameTextField().sendKeys("Doe");
+        element.getLastNameTextField().sendKeys("Silveryearly");
         log.info("Entered last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
@@ -112,11 +114,12 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"SS for silver yearly signup validation");
-        System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
+        ExtentReportListener.logMessage("Email: "+email);
 	}
 	
 	@Test(priority=3, enabled = true)
@@ -134,7 +137,8 @@ public class SignupDev extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getGoldSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked gold subscribe button");
-		element.getEmailTextField().sendKeys("TestGoldDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestGoldDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -144,8 +148,8 @@ public class SignupDev extends BaseClass {
         log.info("Entered password again");
         element.getSetPassword().click();
         log.info("Clicked set password button");
-        element.getFirstNameTextField().sendKeys("John");
-        element.getLastNameTextField().sendKeys("Doe");
+        element.getFirstNameTextField().sendKeys("Dev");
+        element.getLastNameTextField().sendKeys("Goldyearly");
         log.info("Entered first name and last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
@@ -169,11 +173,12 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold yearly signup  validation");
-        System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
+        ExtentReportListener.logMessage("Email: "+email);
 	}
 	
 	@Test(priority=4, enabled = true)
@@ -193,7 +198,8 @@ public class SignupDev extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getSilverSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked silver subscribe button");
-		element.getEmailTextField().sendKeys("TestSilverMonthlyDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestSilverMonthlyDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -203,9 +209,9 @@ public class SignupDev extends BaseClass {
         log.info("Entered password again");
         element.getSetPassword().click();
         log.info("Clicked set password button");
-        element.getFirstNameTextField().sendKeys("John");
+        element.getFirstNameTextField().sendKeys("Dev");
         log.info("Entered first name");
-        element.getLastNameTextField().sendKeys("Doe");
+        element.getLastNameTextField().sendKeys("Silvermonthly");
         log.info("Entered last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
@@ -229,11 +235,12 @@ public class SignupDev extends BaseClass {
         log.info("Clicked next button");
         element.getSubscribeButton().click();
         log.info("Clicked subscribe button");
+        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"SS for Silver monthly signup validation");
-        System.out.println(element.getConfirmSilverSignup().getText());
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
+        ExtentReportListener.logMessage("Email: "+email);
 	}
 	
 	@Test(priority=5, enabled = true)
@@ -253,7 +260,8 @@ public class SignupDev extends BaseClass {
 		try {jse.executeAsyncScript("arguments[0].click();",element.getGoldSubscribeButton());}
 		catch (Exception e) {}
 		log.info("Clicked gold subscribe button");
-		element.getEmailTextField().sendKeys("TestGoldMonthlyDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestGoldMonthlyDev"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
 		log.info("Entered random email");
 		element.getContinueButton().click();
 		log.info("Clicked continue button");
@@ -263,8 +271,8 @@ public class SignupDev extends BaseClass {
         log.info("Entered password again");
         element.getSetPassword().click();
         log.info("Clicked set password button");
-        element.getFirstNameTextField().sendKeys("John");
-        element.getLastNameTextField().sendKeys("Doe");
+        element.getFirstNameTextField().sendKeys("Dev");
+        element.getLastNameTextField().sendKeys("Goldmonthly");
         log.info("Entered first name and last name");
         element.getSignUpButton2().click();
         log.info("Clicked signup button");
@@ -293,9 +301,10 @@ public class SignupDev extends BaseClass {
     	ExtentReportListener.screenshot(screenshotPath1,"SS for Gold monthly validation");
         element.getContinueSilverSignupButton().click();
         log.info("Clicked continue signup button");
+        ExtentReportListener.logMessage("Email: "+email);
 	}
 	
 		
-	}
+}
 	
 	

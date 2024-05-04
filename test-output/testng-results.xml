@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="19" total="20" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-04T10:51:29 IST" name="Suite" finished-at="2024-05-04T10:52:43 IST" duration-ms="73661">
+  <suite started-at="2024-05-04T12:10:35 IST" name="Suite" finished-at="2024-05-04T12:15:19 IST" duration-ms="284187">
     <groups>
     </groups>
-    <test started-at="2024-05-04T10:51:29 IST" name="Test" finished-at="2024-05-04T10:52:43 IST" duration-ms="73661">
-      <class name="prod.Regression">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:51:29 IST" name="preConditions" finished-at="2024-05-04T10:51:32 IST" duration-ms="2231" status="PASS">
+    <test started-at="2024-05-04T12:10:35 IST" name="Test" finished-at="2024-05-04T12:15:19 IST" duration-ms="284187">
+      <class name="dev.SignupDev">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:10:35 IST" name="preConditions" finished-at="2024-05-04T12:10:38 IST" duration-ms="2985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="Check_bronze_mapPage_restrictions()[pri:20, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:51:32 IST" name="Check_bronze_mapPage_restrictions" finished-at="2024-05-04T10:52:41 IST" duration-ms="69813" status="PASS">
+        <test-method signature="signup_Bronze_Dev()[pri:1, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:10:38 IST" name="signup_Bronze_Dev" finished-at="2024-05-04T12:11:15 IST" duration-ms="37707" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Check_bronze_mapPage_restrictions -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@182f1e9a]" started-at="2024-05-04T10:52:41 IST" name="postConditions" finished-at="2024-05-04T10:52:43 IST" duration-ms="1552" status="PASS">
+        </test-method> <!-- signup_Bronze_Dev -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:11:15 IST" name="postConditions" finished-at="2024-05-04T12:11:17 IST" duration-ms="1401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->
-      </class> <!-- prod.Regression -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:11:17 IST" name="preConditions" finished-at="2024-05-04T12:11:18 IST" duration-ms="1166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="signup_SilverYearly_Dev()[pri:2, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:11:18 IST" name="signup_SilverYearly_Dev" finished-at="2024-05-04T12:12:16 IST" duration-ms="58391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup_SilverYearly_Dev -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:12:16 IST" name="postConditions" finished-at="2024-05-04T12:12:18 IST" duration-ms="1722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:12:18 IST" name="preConditions" finished-at="2024-05-04T12:12:19 IST" duration-ms="1132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="signup_GoldYearly_Dev()[pri:3, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:12:19 IST" name="signup_GoldYearly_Dev" finished-at="2024-05-04T12:13:17 IST" duration-ms="58170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup_GoldYearly_Dev -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:13:17 IST" name="postConditions" finished-at="2024-05-04T12:13:19 IST" duration-ms="1647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:13:19 IST" name="preConditions" finished-at="2024-05-04T12:13:20 IST" duration-ms="1167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="signup_SilverMonthly_Dev()[pri:4, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:13:20 IST" name="signup_SilverMonthly_Dev" finished-at="2024-05-04T12:14:18 IST" duration-ms="57903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup_SilverMonthly_Dev -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:14:18 IST" name="postConditions" finished-at="2024-05-04T12:14:20 IST" duration-ms="1632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:14:20 IST" name="preConditions" finished-at="2024-05-04T12:14:21 IST" duration-ms="1115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="signup_GoldMonthly_Dev()[pri:5, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:14:21 IST" name="signup_GoldMonthly_Dev" finished-at="2024-05-04T12:15:17 IST" duration-ms="56530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup_GoldMonthly_Dev -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:dev.SignupDev@56db847e]" started-at="2024-05-04T12:15:17 IST" name="postConditions" finished-at="2024-05-04T12:15:19 IST" duration-ms="1421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+      </class> <!-- dev.SignupDev -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

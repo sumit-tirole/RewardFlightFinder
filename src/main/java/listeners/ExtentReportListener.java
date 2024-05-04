@@ -133,15 +133,11 @@ System.out.println((result.getMethod().getMethodName() + " failed!"));
 	}
 
 	public static void logMessage(String message) throws IOException {
-		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-        String logMessage = timestamp + " - " + message;
-        test.get().info(logMessage);
+		test.get().info(message);
     }
 	
 	public static void screenshot(String screenshotPath1,String message) throws IOException {
-		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-        test.get().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath1).build());
-        
-    }
+		test.get().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath1).build());
+	}
 	
 }

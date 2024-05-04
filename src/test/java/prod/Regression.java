@@ -190,19 +190,20 @@ public class Regression extends BaseClass {
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
 		element1.getAcceptCookies().click();
-		element.getEmailTextField().sendKeys("TestBronzeProd"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com");
+		String email = "TestBronzeProd"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
+		element.getEmailTextField().sendKeys(email);
         element.getContinueButton().click();
         element.getPasswordTextField().sendKeys("Test@123");
         element.getConfirmPasswordTextField().sendKeys("Test@123");
         element.getSetPassword().click();
-        element.getFirstNameTextField().sendKeys("Bronze");
-        element.getLastNameTextField().sendKeys("Testing");
+        element.getFirstNameTextField().sendKeys("Prod");
+        element.getLastNameTextField().sendKeys("Bronze");
         element.getSignUpButton2().click();
         System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"SS for Bronze signup validation");
         element.getContinueAfterSignUpButton().click();
-	
+        ExtentReportListener.logMessage("Email: "+email);
 	}
 	
 	@Test(priority=7 , enabled=true)
