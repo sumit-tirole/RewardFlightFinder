@@ -479,7 +479,7 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	element1.getSearchButton().click();
 	int destinationNumber = java.util.concurrent.ThreadLocalRandom.current().nextInt(1, 101);
 	element1.getSelectDestination(destinationNumber).click();
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Map page zoom in validation");
 	element.getAccountButton().click();
