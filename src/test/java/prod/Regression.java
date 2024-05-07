@@ -521,7 +521,7 @@ public void Check_bronze_mapPage_restrictions() throws Throwable {
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Upgrade membership validation");
 }
 	
-@Test(priority=21, enabled = false)
+@Test(priority=21, enabled = true)
 public void check_one_alert_restriction_bronze() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
@@ -562,7 +562,7 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	element.getLogoutButton().click();
 	}
 	
-@Test(priority=22, enabled = false)
+@Test(priority=22, enabled = true)
 public void check_five_alert_restriction_silver() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
