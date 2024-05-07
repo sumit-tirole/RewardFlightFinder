@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -537,9 +538,10 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
 	
-	if(element.getBronzeUpgradePopup().isDisplayed()) {
-	element.getBronzeUpgradePopup().click();
-	}
+	try {
+	element.getBronzeUpgradePopup().click(); }
+	catch (NoSuchElementException e) { }
+	
 	element.getCreateAlertButton().click();
 	element.getDepartStartDate().click();
 	element.getNextMonth().click();
@@ -550,8 +552,8 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	element.getStartDate().click();
 	element.getEndDate().click();
 	element.getCreateAlertButtonPopup().click();
-	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+//	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+//	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
 	String actualPopupText = element.getBronzeUpgradePopup2().getText();
 	String expectedPopText = "You can only have 1 active alert at once. Please either delete the existing active alert or upgrade your membership";
 	Assert.assertEquals(actualPopupText, expectedPopText);
@@ -588,8 +590,8 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	element.getStartDate().click();
 	element.getEndDate().click();
 	element.getCreateAlertButtonPopup().click();
-	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+//	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+//	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
 	String actualPopupText = element.getBronzeUpgradePopup2().getText();
 	System.out.println(actualPopupText);
 	String expectedPopText = "You can only have 5 active alerts at once. Please either delete one of your other active alerts, or upgrade your membership";
