@@ -363,8 +363,9 @@ public void LinkedinProd() throws Throwable {
 	Set <String> handles = driver.getWindowHandles();
 	for(String handle:handles) {
 		driver.switchTo().window(handle);
+		Thread.sleep(500);
 		if(driver.getTitle().equals("Easily Find Reward Flight Availability: Redeem British Airways Avios Points")) {
-		}
+		} 
 		else {break;}
 	}
 	String linkedinurl = driver.getCurrentUrl();
@@ -519,7 +520,86 @@ public void Check_bronze_mapPage_restrictions() throws Throwable {
 	element.getLogoutButton().click();
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Upgrade membership validation");
 }
-
+	
+@Test(priority=21, enabled = false)
+public void check_one_alert_restriction_bronze() throws Throwable {
+	try {driver.get(fileUtils.readFromPropertyFile("url"));}
+	catch(WebDriverException e) {}
+	CreateAlertElements element = new CreateAlertElements(driver);
+	element.getAcceptCookies().click();
+	element.getSignInLink().click();
+	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
+	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
+	element.getSignInButton().click();
+	Actions action = new Actions(driver);
+	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
+	element.getSearchButton().click();
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+	
+	if(element.getBronzeUpgradePopup().isDisplayed()) {
+	element.getBronzeUpgradePopup().click();
+	}
+	element.getCreateAlertButton().click();
+	element.getDepartStartDate().click();
+	element.getNextMonth().click();
+	element.getStartDate().click();
+	element.getEndDate().click();
+	element.getreturnStartDate().click();
+	element.getNextMonth().click();
+	element.getStartDate().click();
+	element.getEndDate().click();
+	element.getCreateAlertButtonPopup().click();
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+	String actualPopupText = element.getBronzeUpgradePopup2().getText();
+	String expectedPopText = "You can only have 1 active alert at once. Please either delete the existing active alert or upgrade your membership";
+	Assert.assertEquals(actualPopupText, expectedPopText);
+	element.getUpgradeButton().click();
+	Thread.sleep(1000);
+	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
+	element.getAccountButton().click();
+	element.getLogoutButton().click();
+	}
+	
+@Test(priority=22, enabled = false)
+public void check_five_alert_restriction_silver() throws Throwable {
+	try {driver.get(fileUtils.readFromPropertyFile("url"));}
+	catch(WebDriverException e) {}
+	CreateAlertElements element = new CreateAlertElements(driver);
+	element.getAcceptCookies().click();
+	element.getSignInLink().click();
+	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
+	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));
+	element.getSignInButton().click();
+	Actions action = new Actions(driver);
+	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
+	element.getSearchButton().click();
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+		
+	element.getCreateAlertButton().click();
+	element.getDepartStartDate().click();
+	element.getNextMonth().click();
+	element.getStartDate().click();
+	element.getEndDate().click();
+	element.getreturnStartDate().click();
+	element.getNextMonth().click();
+	element.getStartDate().click();
+	element.getEndDate().click();
+	element.getCreateAlertButtonPopup().click();
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+	String actualPopupText = element.getBronzeUpgradePopup2().getText();
+	System.out.println(actualPopupText);
+	String expectedPopText = "You can only have 5 active alerts at once. Please either delete one of your other active alerts, or upgrade your membership";
+	Assert.assertEquals(actualPopupText, expectedPopText);
+	element.getUpgradeButton().click();
+	Thread.sleep(1000);
+	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
+	element.getAccountButton().click();
+	element.getLogoutButton().click();
+	}
 }
 	
 	

@@ -195,16 +195,40 @@ public class CreateAlertElements {
 		return userName;
 	}
 		
+	@FindBy(xpath="//button[text()='No']")
+	WebElement bronzeUpgradePopup;
 	
+	public WebElement getBronzeUpgradePopup() {
+		return bronzeUpgradePopup;
+	}
 
+	@FindBy(xpath="//*[@class='cst-popup__close']")
+	WebElement closeButton;
+	
+	public WebElement getCloseButton() {
+		synchronised(By.xpath("//*[@class='cst-popup__close']"),closeButton);
+		return closeButton;
+	}
 	
 	
 	
+	@FindBy(xpath="//*[@class='cst-popup__text']")
+	WebElement bronzeUpgradePopup2;
+	
+	public WebElement getBronzeUpgradePopup2() {
+		synchronised(By.xpath("//*[@class='cst-popup__text']"),bronzeUpgradePopup2);
+		return bronzeUpgradePopup2;
+	}
 	
 	
 	
+	@FindBy(xpath="//button[text()='Upgrade Now']")
+	WebElement upgradeButton;
 	
-	
+	public WebElement getUpgradeButton() {
+		synchronised(By.xpath("//button[text()='Upgrade Now']"),upgradeButton);
+		return upgradeButton;
+	}
 	
 	
 	
