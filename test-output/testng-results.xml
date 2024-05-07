@@ -2,20 +2,20 @@
 <testng-results ignored="21" total="22" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-07T13:15:26 IST" name="Default suite" finished-at="2024-05-07T13:16:44 IST" duration-ms="77929">
+  <suite started-at="2024-05-07T19:01:37 IST" name="Default suite" finished-at="2024-05-07T19:03:22 IST" duration-ms="104894">
     <groups>
     </groups>
-    <test started-at="2024-05-07T13:15:26 IST" name="Default test" finished-at="2024-05-07T13:16:44 IST" duration-ms="77929">
+    <test started-at="2024-05-07T19:01:37 IST" name="Default test" finished-at="2024-05-07T19:03:22 IST" duration-ms="104894">
       <class name="prod.Regression">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@62e70ea3]" started-at="2024-05-07T13:15:26 IST" name="preConditions" finished-at="2024-05-07T13:15:29 IST" duration-ms="2605" status="PASS">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@741b3bc3]" started-at="2024-05-07T19:01:37 IST" name="preConditions" finished-at="2024-05-07T19:01:39 IST" duration-ms="2515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="check_five_alert_restriction_silver()[pri:22, instance:prod.Regression@62e70ea3]" started-at="2024-05-07T13:15:29 IST" name="check_five_alert_restriction_silver" finished-at="2024-05-07T13:16:43 IST" duration-ms="73663" status="PASS">
+        <test-method signature="Check_Map_Page_Destinations()[pri:19, instance:prod.Regression@741b3bc3]" started-at="2024-05-07T19:01:39 IST" name="Check_Map_Page_Destinations" finished-at="2024-05-07T19:03:17 IST" duration-ms="97539" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_five_alert_restriction_silver -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@62e70ea3]" started-at="2024-05-07T13:16:43 IST" name="postConditions" finished-at="2024-05-07T13:16:44 IST" duration-ms="1582" status="PASS">
+        </test-method> <!-- Check_Map_Page_Destinations -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@741b3bc3]" started-at="2024-05-07T19:03:17 IST" name="postConditions" finished-at="2024-05-07T19:03:22 IST" duration-ms="4756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->

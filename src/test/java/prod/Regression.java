@@ -2,18 +2,21 @@ package prod;
 
 import java.time.Duration;
 import java.util.Set;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.AppleLogin;
@@ -23,6 +26,7 @@ import com.flightfinder.pomrepo.GoogleLogin;
 import com.flightfinder.pomrepo.MapPage;
 import com.flightfinder.pomrepo.ProdElements;
 import com.flightfinder.pomrepo.SignUpElements;
+
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
 
@@ -468,6 +472,11 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
 	element.getSignInButton().click();
 	element1.getWorldMapButton().click();
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
 	Actions action = new Actions(driver);
 	Thread.sleep(1000);
 	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
@@ -552,14 +561,15 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	element.getStartDate().click();
 	element.getEndDate().click();
 	element.getCreateAlertButtonPopup().click();
-//	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-//	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
 	String actualPopupText = element.getBronzeUpgradePopup2().getText();
 	String expectedPopText = "You can only have 1 active alert at once. Please either delete the existing active alert or upgrade your membership";
 	Assert.assertEquals(actualPopupText, expectedPopText);
 	element.getUpgradeButton().click();
 	Thread.sleep(1000);
 	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
+	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
 	element.getAccountButton().click();
 	element.getLogoutButton().click();
 	}
@@ -590,8 +600,8 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	element.getStartDate().click();
 	element.getEndDate().click();
 	element.getCreateAlertButtonPopup().click();
-//	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-//	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
+	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
+	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
 	String actualPopupText = element.getBronzeUpgradePopup2().getText();
 	System.out.println(actualPopupText);
 	String expectedPopText = "You can only have 5 active alerts at once. Please either delete one of your other active alerts, or upgrade your membership";

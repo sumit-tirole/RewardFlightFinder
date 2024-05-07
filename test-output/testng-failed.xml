@@ -7,7 +7,7 @@
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="check_five_alert_restriction_silver"/>
+          <include name="Check_Map_Page_Destinations"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>
