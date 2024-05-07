@@ -41,6 +41,7 @@ public class Alerts extends BaseClass {
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
+		Thread.sleep(1500);
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
 		Thread.sleep(2000);
