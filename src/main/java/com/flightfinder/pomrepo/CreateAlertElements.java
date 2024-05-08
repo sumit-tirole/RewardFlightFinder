@@ -210,6 +210,13 @@ public class CreateAlertElements {
 		return closeButton;
 	}
 	
+	@FindBy(xpath="//*[@class='cst-popup__close ']")
+	WebElement closeButton2;
+	
+	public WebElement getCloseButton2() {
+		synchronised(By.xpath("//*[@class='cst-popup__close ']"),closeButton2);
+		return closeButton2;
+	}
 	
 	
 	@FindBy(xpath="//*[@class='cst-popup__text']")
@@ -230,11 +237,46 @@ public class CreateAlertElements {
 		return upgradeButton;
 	}
 	
+	@FindBy(xpath="(//div[text()='01' and @class='CalendarDay__Date'])[2]")
+	WebElement startDateBronze;
+	
+	@FindBy(xpath="(//div[text()='21' and @class='CalendarDay__Date'])[2]")
+	WebElement endDateBronze;
+	
+	public WebElement getStartDateBronze() {
+		synchronised(By.xpath("(//div[text()='01' and @class='CalendarDay__Date'])[2]"),startDateBronze);
+		return startDateBronze;
+	}
+	
+	public WebElement getEndDateBronze() {
+		synchronised(By.xpath("(//div[text()='21' and @class='CalendarDay__Date'])[2]"),endDateBronze);
+		return endDateBronze;
+	}
+	
+	@FindBy(xpath="(//div[text()='01' and @class='CalendarDay__Date'])[2]")
+	WebElement startDateSilver;
+	
+	@FindBy(xpath="(//div[text()='16' and @class='CalendarDay__Date'])[2]")
+	WebElement endDateSilver;
+	
+	public WebElement getStartDateSilver() {
+		synchronised(By.xpath("(//div[text()='01' and @class='CalendarDay__Date'])[2]"),startDateSilver);
+		return startDateSilver;
+	}
+	
+	public WebElement getEndDateSilver() {
+		synchronised(By.xpath("(//div[text()='16' and @class='CalendarDay__Date'])[2]"),endDateSilver);
+		return endDateSilver;
+	}
 	
 	
+	@FindBy(xpath="//p[@class='activeAlertText']")
+	WebElement activeAlertText;
 	
-	
-	
+	public WebElement getActiveAlertText() {
+		synchronised(By.xpath("//p[@class='activeAlertText']"),activeAlertText);
+		return activeAlertText;
+	}
 	
 	
 	

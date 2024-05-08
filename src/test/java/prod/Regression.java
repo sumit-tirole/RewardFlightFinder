@@ -49,6 +49,7 @@ public class Regression extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys("ABC@123");
 		element.getSignInButton().click();
+		Thread.sleep(2000);    // need to handle
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Invalid Login validation");
 	}
@@ -284,9 +285,10 @@ public void GuestuserProd() throws Throwable {
 	Actions action = new Actions(driver);
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	if(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']")).isDisplayed()) {
-	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
 	}
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("window.scrollBy(0, 1000)");

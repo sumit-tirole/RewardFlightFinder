@@ -1,12 +1,12 @@
 package com.flightfinder.genericutility;
 
 import java.awt.Dimension;
+
 import java.awt.Toolkit;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -62,8 +62,8 @@ public class BaseClass {
 	@AfterMethod
 	public void postConditions() throws Exception {
 //		ScreenRecorderUtil.stopRecord();
-		driver.close();
-		driver.quit();	
+//		driver.close();
+//		driver.quit();	
 		Thread.sleep(1000);	}
 	
 	

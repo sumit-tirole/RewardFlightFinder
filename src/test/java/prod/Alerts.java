@@ -27,8 +27,7 @@ public class Alerts extends BaseClass {
 	public static String outboundDate;
 	public Logger log = LogManager.getLogger(Alerts.class);
 	
-	
-	
+		
 	@Test(priority=1, enabled = true)
 	public void create_Alert_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
