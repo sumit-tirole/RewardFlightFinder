@@ -510,8 +510,14 @@ public void Check_bronze_mapPage_restrictions() throws Throwable {
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
 	element.getSignInButton().click();
 	element1.getWorldMapButton().click();
+	
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
+	
 	Actions action = new Actions(driver);
-	Thread.sleep(1000);
 	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
 	element1.getDateField().click();
 	element1.getNextMonth().click();
@@ -544,8 +550,12 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	Actions action = new Actions(driver);
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+		
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
 	
 	try {
 	element.getBronzeUpgradePopup().click(); }
@@ -569,7 +579,11 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	element.getUpgradeButton().click();
 	Thread.sleep(1000);
 	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
-	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
 	element.getAccountButton().click();
 	element.getLogoutButton().click();
 	}
@@ -587,8 +601,11 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	Actions action = new Actions(driver);
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
 		
 	element.getCreateAlertButton().click();
 	element.getDepartStartDate().click();
@@ -607,7 +624,11 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	String expectedPopText = "You can only have 5 active alerts at once. Please either delete one of your other active alerts, or upgrade your membership";
 	Assert.assertEquals(actualPopupText, expectedPopText);
 	element.getUpgradeButton().click();
-	Thread.sleep(1000);
+	try {
+	    waitForLoader();
+	} catch (TimeoutException e) {
+	    
+	}
 	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
 	element.getAccountButton().click();
 	element.getLogoutButton().click();

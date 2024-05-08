@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,10 +42,15 @@ public class Alerts extends BaseClass {
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
-		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
-		Thread.sleep(2000);
+		try {
+		    waitForLoader();
+		} catch (TimeoutException e) {
+		    
+		}
+//		Thread.sleep(2000);
+//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
+//		Thread.sleep(2000);
 		element.getCreateAlertButton().click();
 		element.getDepartStartDate().click();
 		element.getNextMonth().click();

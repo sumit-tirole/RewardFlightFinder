@@ -68,7 +68,7 @@ public class BaseClass {
 	
 	
 	public void waitForLoader() {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='full-page-loader-comp text-center']")));
 	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='full-page-loader-comp text-center']")));
 	}
