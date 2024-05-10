@@ -7,7 +7,7 @@
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="popularArticles_Check_Prod"/>
+          <include name="facebookProd"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>

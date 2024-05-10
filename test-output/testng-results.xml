@@ -2,20 +2,20 @@
 <testng-results ignored="21" total="22" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-10T15:38:32 IST" name="Default suite" finished-at="2024-05-10T15:38:51 IST" duration-ms="19484">
+  <suite started-at="2024-05-10T19:02:41 IST" name="Default suite" finished-at="2024-05-10T19:03:12 IST" duration-ms="30992">
     <groups>
     </groups>
-    <test started-at="2024-05-10T15:38:32 IST" name="Default test" finished-at="2024-05-10T15:38:51 IST" duration-ms="19484">
+    <test started-at="2024-05-10T19:02:41 IST" name="Default test" finished-at="2024-05-10T19:03:12 IST" duration-ms="30992">
       <class name="prod.Regression">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@423e4cbb]" started-at="2024-05-10T15:38:32 IST" name="preConditions" finished-at="2024-05-10T15:38:34 IST" duration-ms="2766" status="PASS">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Regression@1d1f7216]" started-at="2024-05-10T19:02:41 IST" name="preConditions" finished-at="2024-05-10T19:02:45 IST" duration-ms="3284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="AppstoreImage_Check_Prod()[pri:10, instance:prod.Regression@423e4cbb]" started-at="2024-05-10T15:38:34 IST" name="AppstoreImage_Check_Prod" finished-at="2024-05-10T15:38:49 IST" duration-ms="14329" status="PASS">
+        <test-method signature="facebookProd()[pri:13, instance:prod.Regression@1d1f7216]" started-at="2024-05-10T19:02:45 IST" name="facebookProd" finished-at="2024-05-10T19:03:05 IST" duration-ms="20216" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AppstoreImage_Check_Prod -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@423e4cbb]" started-at="2024-05-10T15:38:49 IST" name="postConditions" finished-at="2024-05-10T15:38:51 IST" duration-ms="2318" status="PASS">
+        </test-method> <!-- facebookProd -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Regression@1d1f7216]" started-at="2024-05-10T19:03:05 IST" name="postConditions" finished-at="2024-05-10T19:03:12 IST" duration-ms="7420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->

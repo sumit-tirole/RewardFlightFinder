@@ -342,6 +342,7 @@ public void facebookProd() throws Throwable {
 		else {break;}
 	}
 	Assert.assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/rewardflightfinder/");
+	element1.getFbCloseButton().click();
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for facebook redirection validation");
 }
@@ -399,6 +400,7 @@ public void LinkedinProd() throws Throwable {
 	String linkedinurl = driver.getCurrentUrl();
 	System.out.println(linkedinurl);
 	Assert.assertEquals(linkedinurl, "https://www.linkedin.com/company/reward-flight-finder/");
+	element1.getLinkedinCloseButton().click();
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for linkedin redirection validation");
 }

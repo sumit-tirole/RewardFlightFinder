@@ -137,5 +137,23 @@ public class ProdElements {
 		synchronised(By.xpath("//img[@src='https://rewardflightfinder.com/static/media/app-store-img.626b8ae3.png']"),applestoreImage);
 		return applestoreImage;
 	}
+
+	@FindBy(xpath="//div[@aria-label='Close']")
+	WebElement fbCloseButton;
 	
+	public WebElement getFbCloseButton() {
+		synchronised(By.xpath("//div[@aria-label='Close']"), fbCloseButton);
+		return fbCloseButton;
+	}
+	
+	@FindBy(xpath="(//*[@class='artdeco-icon lazy-loaded'])[1]")
+	WebElement linkedinCloseButton;
+			
+	public WebElement getLinkedinCloseButton() {
+		synchronised(By.xpath("(//*[@class='artdeco-icon lazy-loaded'])[1]"), linkedinCloseButton);
+		return linkedinCloseButton;
+	}		
+			
+			
+			
 }
