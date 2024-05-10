@@ -139,8 +139,11 @@ public class Regression extends BaseClass {
 			break;
 			}
 		}
+		for (int i = 0; i < 3; i++) {
+		    try {element.getAccountButton().click();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		
-		element.getAccountButton().click();
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Facebook Login validation");
 		element.getLogoutButton().click();

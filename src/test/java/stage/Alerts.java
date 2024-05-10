@@ -40,7 +40,11 @@ public class Alerts extends BaseClass {
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));
 		element.getSignInButton().click();
 		Actions action = new Actions(driver);
-		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
+		
+		for (int i = 0; i < 3; i++) {
+		    try {action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		element.getSearchButton().click();
 		Thread.sleep(1500);
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
