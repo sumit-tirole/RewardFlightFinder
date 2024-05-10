@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="prod.Membership_Restrictions">
+      <class name="prod.Regression">
         <methods>
+          <include name="popularBlogs_Check_Prod"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="date_range_restrictions_silver"/>
         </methods>
-      </class> <!-- prod.Membership_Restrictions -->
+      </class> <!-- prod.Regression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

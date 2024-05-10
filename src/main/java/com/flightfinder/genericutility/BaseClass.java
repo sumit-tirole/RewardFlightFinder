@@ -62,8 +62,8 @@ public class BaseClass {
 	@AfterMethod
 	public void postConditions() throws Exception {
 //		ScreenRecorderUtil.stopRecord();
-//		driver.close();
-//		driver.quit();	
+		driver.close();
+		driver.quit();	
 		Thread.sleep(1000);	}
 	
 	

@@ -219,6 +219,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,500)");
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular articles validation");
 	}
@@ -233,6 +235,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularTopics().isDisplayed(), true);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,500)");
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular topics validation");
 	}
@@ -247,6 +251,8 @@ public class Regression extends BaseClass {
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularBlogs().isDisplayed(), true);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,500)");
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular blogs validation");
 	}
