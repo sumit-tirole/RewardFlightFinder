@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
@@ -479,7 +480,12 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
 	element.getSignInButton().click();
-	element1.getWorldMapButton().click();
+	
+	for (int i = 0; i < 3; i++) {
+	    try {element1.getWorldMapButton().click();
+	        break;} 
+	    catch (StaleElementReferenceException e) {}}
+	
 	try {
 	    waitForLoader();
 	} catch (TimeoutException e) {
@@ -487,7 +493,7 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	}
 	Actions action = new Actions(driver);
 	Thread.sleep(1000);
-	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
+	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london").pause(1000).sendKeys(Keys.ENTER).build().perform();
 	element1.getDateField().click();
 	element1.getNextMonth().click();
 	element1.getStartDate().click();
@@ -517,7 +523,11 @@ public void Check_bronze_mapPage_restrictions() throws Throwable {
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
 	element.getSignInButton().click();
-	element1.getWorldMapButton().click();
+	
+	for (int i = 0; i < 3; i++) {
+	    try {element1.getWorldMapButton().click();
+	        break;} 
+	    catch (StaleElementReferenceException e) {}}
 	
 	try {
 	    waitForLoader();
@@ -641,6 +651,8 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	element.getAccountButton().click();
 	element.getLogoutButton().click();
 	}
+
+	
 }
 	
 	

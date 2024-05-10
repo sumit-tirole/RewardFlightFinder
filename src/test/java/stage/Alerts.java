@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -56,6 +57,13 @@ public class Alerts extends BaseClass {
 		element.getEndDate().click();
 		element.getCreateAlertButtonPopup().click();
 		System.out.println(element.getAlertmsg().getText());
+//		String alertPopup = element.getAlertmsg().getText();
+//		if(alertPopup.contains("Alert already exists!")) {
+//			outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();	
+//		}
+//		else {	
+//		outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();
+//		}
 		outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert created validation");
@@ -77,7 +85,10 @@ public class Alerts extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));
 		element.getSignInButton().click();
-		element1.getAlertButton().click();
+		for (int i = 0; i < 3; i++) {
+		    try {element1.getAlertButton().click();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		try {jse.executeAsyncScript("arguments[0].click();",element1.getEditAlertButton(outboundDate));}
 		catch (Exception e) {}	
@@ -101,7 +112,10 @@ public class Alerts extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));
 		element.getSignInButton().click();
-		element1.getAlertButton().click();
+		for (int i = 0; i < 3; i++) {
+		    try {element1.getAlertButton().click();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		try {jse.executeAsyncScript("arguments[0].click();",element1.getEditAlertButton(outboundDate));}
 		catch (Exception e) {}	
