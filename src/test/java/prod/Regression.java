@@ -2,7 +2,6 @@ package prod;
 
 import java.time.Duration;
 import java.util.Set;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -17,7 +16,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.AppleLogin;
@@ -27,7 +25,6 @@ import com.flightfinder.pomrepo.GoogleLogin;
 import com.flightfinder.pomrepo.MapPage;
 import com.flightfinder.pomrepo.ProdElements;
 import com.flightfinder.pomrepo.SignUpElements;
-
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
 
@@ -37,7 +34,7 @@ public class Regression extends BaseClass {
 	FileUtility fileUtils = new FileUtility();
 	public static String outboundDate;
 	public Logger log = LogManager.getLogger(Regression.class);
-	
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	
 		
 	@Test(priority=1, enabled = true)
@@ -50,7 +47,8 @@ public class Regression extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys("ABC@123");
 		element.getSignInButton().click();
-		Thread.sleep(2000);    // need to handle
+		String errorMsg = element.getErrorMsg().getText();
+		Assert.assertEquals(errorMsg, "Invalid email or password.");
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Invalid Login validation");
 	}
@@ -65,7 +63,10 @@ public class Regression extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
 		element.getSignInButton().click();
-		element.getAccountButton().click();
+		for (int i = 0; i < 3; i++) {
+		    try {element.getAccountButton().click();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Valid Login validation");
 		element.getLogoutButton().click();
@@ -103,7 +104,10 @@ public class Regression extends BaseClass {
 			break;
 			}
 		}
-		element.getAccountButton().click();
+		for (int i = 0; i < 3; i++) {
+		    try {element.getAccountButton().click();
+		        break;} 
+		    catch (StaleElementReferenceException e) {}}
 		element.getLogoutButton().click();
 		
 	}
@@ -222,9 +226,11 @@ public class Regression extends BaseClass {
 		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
 		element1.getArticlesIcon().click();
-		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
 		jse.executeScript("window.scrollBy(0,500)");
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//picture[@class='d-b'])[5]")))); 
+			
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular articles validation");
 	}
@@ -240,7 +246,8 @@ public class Regression extends BaseClass {
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularTopics().isDisplayed(), true);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,500)");
+		jse.executeScript("window.scrollBy(0,1050)");
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//picture[@class='d-b'])[5]"))));
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular topics validation");
 	}
@@ -257,9 +264,11 @@ public class Regression extends BaseClass {
 		Assert.assertEquals(element1.getPopularBlogs().isDisplayed(), true);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,500)");
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//picture[@class='blog-cardimg'])[1]"))));
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular blogs validation");
 	}
+	
 	@Test(priority=10 , enabled=true)
 	public void AppstoreImage_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
@@ -268,6 +277,8 @@ public class Regression extends BaseClass {
 		CreateAlertElements element = new CreateAlertElements(driver);
 		ProdElements element1 = new ProdElements(driver);
 		element.getAcceptCookies().click();
+		((JavascriptExecutor) driver).executeScript
+		("arguments[0].scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });", element1.getAppstoreImage());
 		Assert.assertEquals(element1.getAppstoreImage().isDisplayed(), true);
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Appstore image validation");

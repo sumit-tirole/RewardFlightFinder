@@ -279,7 +279,13 @@ public class CreateAlertElements {
 	}
 	
 	
+	@FindBy(xpath="//span[@class='error-msg']")
+	WebElement errorMsg;
 	
+	public WebElement getErrorMsg() {
+		synchronised(By.xpath("//span[@class='error-msg']"),errorMsg);
+		return errorMsg;
+	}
 	
 	
 	

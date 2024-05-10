@@ -5,9 +5,9 @@
     <classes>
       <class name="prod.Regression">
         <methods>
-          <include name="popularBlogs_Check_Prod"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
+          <include name="popularArticles_Check_Prod"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>
