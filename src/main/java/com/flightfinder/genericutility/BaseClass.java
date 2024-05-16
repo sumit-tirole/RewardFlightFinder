@@ -37,6 +37,7 @@ public class BaseClass {
 		String browserName = fileUtils.readFromPropertyFile("browser");
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--lang=en-US");
 	        options.addArguments("--remote-allow-origins=*");
 	        options.addArguments("--headless");
 	        options.addArguments("--disable-extensions"); // disabling extensions
