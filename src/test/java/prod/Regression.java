@@ -342,7 +342,11 @@ public void facebookProd() throws Throwable {
 		else {break;}
 	}
 	Assert.assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/rewardflightfinder/");
+	Actions action = new Actions(driver);
+	action.keyDown(Keys.TAB);
+	action.keyUp(Keys.TAB);							
 	element1.getFbCloseButton().click();
+	Thread.sleep(1000);
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for facebook redirection validation");
 }
@@ -371,6 +375,7 @@ public void TwitterProd() throws Throwable {
 	String twitterurl = driver.getCurrentUrl();
 	Assert.assertTrue(twitterurl.contains("https://twitter.com"), "url does not contain https://twitter.com");
 	Assert.assertTrue(twitterurl.contains("rewardflightfdr"), "url does not contain rewardflightfdr");
+	Thread.sleep(3000);
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for twitter redirection validation");
 }
