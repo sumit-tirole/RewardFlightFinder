@@ -10,9 +10,12 @@
   <test thread-count="5" name="Test">
     <classes>
      		
-      	<class name="prod.Regression"><methods><include name="facebookProd"></include></methods></class>
-     	 
-  	
+      	 <class name="prod.Alerts"></class>
+     	 <class name="prod.Regression"></class>
+     	 <class name="prod.Membership_Restrictions"></class>
+     	 <class name="stage.Alerts"></class>
+     	 <class name="stage.SignupStage"></class>
+   		 <class name="dev.SignupDev"></class>	
    </classes>
   </test> <!-- Test -->
   

@@ -11,7 +11,7 @@
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="Check_bronze_mapPage_restrictions"/>
+          <include name="facebookProd"/>
         </methods>
       </class> <!-- prod.Regression -->
     </classes>

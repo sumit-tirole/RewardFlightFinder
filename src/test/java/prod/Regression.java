@@ -342,9 +342,7 @@ public void facebookProd() throws Throwable {
 		else {break;}
 	}
 	Assert.assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/rewardflightfinder/");
-	Thread.sleep(1000);							
 	element1.getFbCloseButton().click();
-	Thread.sleep(1000);
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for facebook redirection validation");
 }

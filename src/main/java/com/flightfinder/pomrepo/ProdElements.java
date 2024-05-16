@@ -138,11 +138,11 @@ public class ProdElements {
 		return applestoreImage;
 	}
 
-	@FindBy(xpath="//div[@aria-label='Close']")
+	@FindBy(xpath="//div[@class='x92rtbv x10l6tqk x1tk7jg1 x1vjfegm']")
 	WebElement fbCloseButton;
 	
 	public WebElement getFbCloseButton() {
-		synchronised(By.xpath("//div[@aria-label='Close']"), fbCloseButton);
+		synchronised(By.xpath("//div[@class='x92rtbv x10l6tqk x1tk7jg1 x1vjfegm']"), fbCloseButton);
 		return fbCloseButton;
 	}
 	
