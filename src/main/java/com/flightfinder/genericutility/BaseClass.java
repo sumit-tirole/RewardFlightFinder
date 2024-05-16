@@ -38,7 +38,7 @@ public class BaseClass {
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("--remote-allow-origins=*");
-//	        options.addArguments("--headless");
+	        options.addArguments("--headless");
 	        options.addArguments("--disable-extensions"); // disabling extensions
 	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 	        options.addArguments("--no-sandbox");
@@ -62,8 +62,8 @@ public class BaseClass {
 	@AfterMethod
 	public void postConditions() throws Exception {
 //		ScreenRecorderUtil.stopRecord();
-//		driver.close();
-//		driver.quit();	
+		driver.close();
+		driver.quit();	
 		Thread.sleep(1000);	}
 	
 	
