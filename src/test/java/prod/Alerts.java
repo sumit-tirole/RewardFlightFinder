@@ -44,10 +44,7 @@ public class Alerts extends BaseClass {
 		} catch (TimeoutException e) {
 		    
 		}
-//		Thread.sleep(2000);
-//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-//		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath("//div[@class='full-page-loader-comp text-center']"))));
-//		Thread.sleep(2000);
+		
 		element.getCreateAlertButton().click();
 		element.getDepartStartDate().click();
 		element.getNextMonth().click();

@@ -369,7 +369,7 @@ public void TwitterProd() throws Throwable {
 		else {break;}
 	}
 	String twitterurl = driver.getCurrentUrl();
-	Assert.assertTrue(twitterurl.contains("https://twitter.com"), "url does not contain https://twitter.com");
+	Assert.assertTrue(twitterurl.contains("https://x.com"), "url does not contain https://x.com");
 	Assert.assertTrue(twitterurl.contains("rewardflightfdr"), "url does not contain rewardflightfdr");
 	Thread.sleep(3000);
 	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
