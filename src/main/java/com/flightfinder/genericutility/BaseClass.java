@@ -54,6 +54,7 @@ public class BaseClass {
 			options.addArguments("--lang=en-US");
 			options.addArguments("--headless");
 			options.addArguments("--window-size=" + windowSize);
+			System.out.println("Running on Edge");
 			driver=new EdgeDriver(options);
 			}
 		else if(browserName.equals("firefox")) {
