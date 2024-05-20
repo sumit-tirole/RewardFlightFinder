@@ -1,7 +1,6 @@
 package com.flightfinder.genericutility;
 
 import java.awt.Dimension;
-
 import java.awt.Toolkit;
 import java.time.Duration;
 
@@ -10,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -48,8 +49,20 @@ public class BaseClass {
 			driver = new ChromeDriver(options);
 			}
 		
-		else if(browserName.equals("edge")) {driver=new EdgeDriver();}
-		else if(browserName.equals("firefox")) {driver=new FirefoxDriver();}
+		else if(browserName.equals("edge")) {
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--lang=en-US");
+			options.addArguments("--headless");
+			options.addArguments("--window-size=" + windowSize);
+			driver=new EdgeDriver(options);
+			}
+		else if(browserName.equals("firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--lang=en-US");
+			options.addArguments("--headless");
+			options.addArguments("--window-size=" + windowSize);
+			driver=new FirefoxDriver(options);
+			}
 		else { System.out.println("BrowserName should be chrome, edge, firefox(lowercase letters) "); 
 		}
 		driver.manage().window().maximize();
