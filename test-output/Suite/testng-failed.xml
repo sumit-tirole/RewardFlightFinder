@@ -11,9 +11,28 @@
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="facebookProd"/>
+          <include name="Check_Map_Page_Destinations"/>
         </methods>
       </class> <!-- prod.Regression -->
+      <class name="dev.SignupDev">
+        <methods>
+          <include name="signup_SilverMonthly_Dev"/>
+          <include name="signup_GoldMonthly_Dev"/>
+          <include name="signup_GoldYearly_Dev"/>
+          <include name="signup_SilverYearly_Dev"/>
+          <include name="postConditions"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- dev.SignupDev -->
+      <class name="stage.SignupStage">
+        <methods>
+          <include name="signup_GoldYearly_Stage"/>
+          <include name="signup_GoldMonthly_Stage"/>
+          <include name="postConditions"/>
+          <include name="preConditions"/>
+          <include name="signup_SilverMonthly_Stage"/>
+        </methods>
+      </class> <!-- stage.SignupStage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

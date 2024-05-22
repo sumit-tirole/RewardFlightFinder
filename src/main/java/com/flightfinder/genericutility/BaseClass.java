@@ -3,7 +3,6 @@ package com.flightfinder.genericutility;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,7 +27,7 @@ public class BaseClass {
 
 	// Executing before test
 	@BeforeMethod
-	public void preConditions() throws Throwable{
+	public void preConditions() throws Throwable {
 //		ScreenRecorderUtil.startRecord("preConditions");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 	    int screenWidth = (int) screenSize.getWidth();
