@@ -44,10 +44,12 @@ public static WebDriver driver;
 	}
 	
 	
-	public WebElement getEditAlertButton(String outboundDate) {
-		WebElement editAlertButton = driver.findElement(By.xpath("//span[text()='"+outboundDate+"'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']"));
-		synchronised(By.xpath("//span[text()='"+outboundDate+"'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']"),editAlertButton);
-		System.out.println(outboundDate);
+	public WebElement getEditAlertButton() {
+//		WebElement editAlertButton = driver.findElement(By.xpath("//span[text()='"+outboundDate+"'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']"));
+//		synchronised(By.xpath("//span[text()='"+outboundDate+"'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']"),editAlertButton);
+		
+		WebElement editAlertButton = driver.findElement(By.xpath("//span[text()='15.06.2024 - 22.06.2024'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']/.."));
+		synchronised(By.xpath("//span[text()='15.06.2024 - 22.06.2024'][1]/ancestor::div[@class='alert-box droppable']//p[text()='Edit Alert']/.."),editAlertButton);
 		return editAlertButton;
 	}
 	

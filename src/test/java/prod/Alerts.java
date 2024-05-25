@@ -1,20 +1,23 @@
 package prod;
 
+import java.time.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.CreateAlertElements;
 import com.flightfinder.pomrepo.DeleteAlertElements;
 import com.flightfinder.pomrepo.EditAlertElements;
+
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
 
@@ -36,6 +39,7 @@ public class Alerts extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
 		element.getSignInButton().click();
+		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
@@ -83,10 +87,9 @@ public class Alerts extends BaseClass {
 		        break;} 
 		    catch (StaleElementReferenceException e) {}}
 			
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		try {jse.executeAsyncScript("arguments[0].click();",element1.getEditAlertButton(outboundDate));}
-		catch (Exception e) {}	
-		element2.getAddPassengersButton().click();
+		element1.getEditAlertButton().click();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element2.getAddPassengersButton()).pause(1000).click().perform();
 		element2.getSaveButton().click();
 		System.out.println(element2.getConfirmEditAlert().getText());
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
@@ -110,9 +113,7 @@ public class Alerts extends BaseClass {
 		    try {element1.getAlertButton().click();
 		        break;} 
 		    catch (StaleElementReferenceException e) {}}
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		try {jse.executeAsyncScript("arguments[0].click();",element1.getEditAlertButton(outboundDate));}
-		catch (Exception e) {}	
+		element1.getEditAlertButton().click();
 		element1.getDeleteButton().click();
 		element1.getDeleteButton().click();
 		System.out.println(element.getAlertmsg().getText());
