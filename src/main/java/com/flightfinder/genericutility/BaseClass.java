@@ -39,7 +39,7 @@ public class BaseClass {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--lang=en-US");
 	        options.addArguments("--remote-allow-origins=*");
-//	        options.addArguments("--headless");
+	        options.addArguments("--headless");
 	        options.addArguments("--disable-extensions"); // disabling extensions
 	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 	        options.addArguments("--no-sandbox");
