@@ -26,7 +26,7 @@ public class GoogleLogin {
 		wait.until(ExpectedConditions.elementToBeClickable(element));	
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		try {
-		Thread.sleep(300); }
+		Thread.sleep(10); }
 		catch (InterruptedException e) {
 		e.printStackTrace();	
 		}
