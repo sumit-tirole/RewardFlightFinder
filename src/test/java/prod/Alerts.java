@@ -44,7 +44,6 @@ public class Alerts extends BaseClass {
 		} catch (TimeoutException e) {
 		    
 		}
-		
 		element.getCreateAlertButton().click();
 		element.getDepartStartDate().click();
 		element.getNextMonth().click();
@@ -57,6 +56,7 @@ public class Alerts extends BaseClass {
 		element.getCreateAlertButtonPopup().click();
 		System.out.println(element.getAlertmsg().getText());
 		outboundDate = driver.findElement(By.xpath("(//div[@class='column text-left create-alert-modal-column column-dates'])[1]")).getText();
+		System.out.println(outboundDate);
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert created validation");
 		element.getCloseAlertPopup().click();

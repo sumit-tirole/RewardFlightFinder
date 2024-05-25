@@ -8,158 +8,42 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">33</td><td class="num">0</td><td class="num">0</td><td class="num attn">8</td><td class="num">2,304,453</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">97,930</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">dev.SignupDev</td><td><a href="#m0">signup_GoldMonthly_Dev</a></td><td rowspan="1">1716213788516</td><td rowspan="1">75002</td></tr><tr class="failedeven"><td><a href="#m1">signup_GoldYearly_Dev</a></td><td rowspan="1">1716213627970</td><td rowspan="1">75355</td></tr><tr class="failedeven"><td><a href="#m2">signup_SilverMonthly_Dev</a></td><td rowspan="1">1716213709350</td><td rowspan="1">73264</td></tr><tr class="failedeven"><td><a href="#m3">signup_SilverYearly_Dev</a></td><td rowspan="1">1716213544113</td><td rowspan="1">78046</td></tr><tr class="failedodd"><td rowspan="1">prod.Regression</td><td><a href="#m4">Check_Map_Page_Destinations</a></td><td rowspan="1">1716212216310</td><td rowspan="1">59087</td></tr><tr class="failedeven"><td rowspan="3">stage.SignupStage</td><td><a href="#m5">signup_GoldMonthly_Stage</a></td><td rowspan="1">1716213419185</td><td rowspan="1">76403</td></tr><tr class="failedeven"><td><a href="#m6">signup_GoldYearly_Stage</a></td><td rowspan="1">1716213258018</td><td rowspan="1">73869</td></tr><tr class="failedeven"><td><a href="#m7">signup_SilverMonthly_Stage</a></td><td rowspan="1">1716213337796</td><td rowspan="1">75351</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">dev.SignupDev</td><td><a href="#m8">signup_Bronze_Dev</a></td><td rowspan="1">1716213501376</td><td rowspan="1">34303</td></tr><tr class="passedodd"><td rowspan="3">prod.Alerts</td><td><a href="#m9">create_Alert_Prod</a></td><td rowspan="1">1716211566308</td><td rowspan="1">91424</td></tr><tr class="passedodd"><td><a href="#m10">delete_Alert_Prod</a></td><td rowspan="1">1716211712153</td><td rowspan="1">44915</td></tr><tr class="passedodd"><td><a href="#m11">edit_Alert_Prod</a></td><td rowspan="1">1716211664046</td><td rowspan="1">42276</td></tr><tr class="passedeven"><td rowspan="5">prod.Membership_Restrictions</td><td><a href="#m12">Check_bronze_mapPage_restrictions</a></td><td rowspan="1">1716212708324</td><td rowspan="1">69523</td></tr><tr class="passedeven"><td><a href="#m13">check_five_alert_restriction_silver</a></td><td rowspan="1">1716212881166</td><td rowspan="1">89880</td></tr><tr class="passedeven"><td><a href="#m14">check_one_alert_restriction_bronze</a></td><td rowspan="1">1716212783883</td><td rowspan="1">91409</td></tr><tr class="passedeven"><td><a href="#m15">date_range_restrictions_bronze</a></td><td rowspan="1">1716212553928</td><td rowspan="1">66246</td></tr><tr class="passedeven"><td><a href="#m16">date_range_restrictions_silver</a></td><td rowspan="1">1716212626084</td><td rowspan="1">76436</td></tr><tr class="passedodd"><td rowspan="19">prod.Regression</td><td><a href="#m17">ApplestoreProd</a></td><td rowspan="1">1716212193275</td><td rowspan="1">17118</td></tr><tr class="passedodd"><td><a href="#m18">AppstoreImage_Check_Prod</a></td><td rowspan="1">1716211995857</td><td rowspan="1">13235</td></tr><tr class="passedodd"><td><a href="#m19">Check_bronze_mapPage_restrictions</a></td><td rowspan="1">1716212281696</td><td rowspan="1">67532</td></tr><tr class="passedodd"><td><a href="#m20">GooglePlayProd</a></td><td rowspan="1">1716212169820</td><td rowspan="1">17027</td></tr><tr class="passedodd"><td><a href="#m21">GuestuserProd</a></td><td rowspan="1">1716212029843</td><td rowspan="1">28241</td></tr><tr class="passedodd"><td><a href="#m22">InstagramProd</a></td><td rowspan="1">1716212145836</td><td rowspan="1">18228</td></tr><tr class="passedodd"><td><a href="#m23">KbarHeaderProd</a></td><td rowspan="1">1716212014991</td><td rowspan="1">9148</td></tr><tr class="passedodd"><td><a href="#m24">LinkedinProd</a></td><td rowspan="1">1716212119029</td><td rowspan="1">20709</td></tr><tr class="passedodd"><td><a href="#m25">TwitterProd</a></td><td rowspan="1">1716212092006</td><td rowspan="1">21122</td></tr><tr class="passedodd"><td><a href="#m26">check_five_alert_restriction_silver</a></td><td rowspan="1">1716212452415</td><td rowspan="1">95514</td></tr><tr class="passedodd"><td><a href="#m27">check_one_alert_restriction_bronze</a></td><td rowspan="1">1716212355173</td><td rowspan="1">91242</td></tr><tr class="passedodd"><td><a href="#m28">facebookProd</a></td><td rowspan="1">1716212064322</td><td rowspan="1">20845</td></tr><tr class="passedodd"><td><a href="#m29">login_Invalid_Credentials_Prod</a></td><td rowspan="1">1716211762855</td><td rowspan="1">24587</td></tr><tr class="passedodd"><td><a href="#m30">login_Valid_Credentials_Prod</a></td><td rowspan="1">1716211793350</td><td rowspan="1">27645</td></tr><tr class="passedodd"><td><a href="#m31">login_With_Facebook_Prod</a></td><td rowspan="1">1716211827317</td><td rowspan="1">37829</td></tr><tr class="passedodd"><td><a href="#m32">popularArticles_Check_Prod</a></td><td rowspan="1">1716211907654</td><td rowspan="1">20093</td></tr><tr class="passedodd"><td><a href="#m33">popularBlogs_Check_Prod</a></td><td rowspan="1">1716211964698</td><td rowspan="1">25229</td></tr><tr class="passedodd"><td><a href="#m34">popularTopics_Check_Prod</a></td><td rowspan="1">1716211933764</td><td rowspan="1">24844</td></tr><tr class="passedodd"><td><a href="#m35">signup_Bronze_Prod</a></td><td rowspan="1">1716211871065</td><td rowspan="1">30538</td></tr><tr class="passedeven"><td rowspan="3">stage.Alerts</td><td><a href="#m36">create_Alert_Stage</a></td><td rowspan="1">1716212977120</td><td rowspan="1">71846</td></tr><tr class="passedeven"><td><a href="#m37">delete_Alert_Stage</a></td><td rowspan="1">1716213097751</td><td rowspan="1">36832</td></tr><tr class="passedeven"><td><a href="#m38">edit_Alert_Stage</a></td><td rowspan="1">1716213055224</td><td rowspan="1">36650</td></tr><tr class="passedodd"><td rowspan="2">stage.SignupStage</td><td><a href="#m39">signup_Bronze_Stage</a></td><td rowspan="1">1716213140328</td><td rowspan="1">34957</td></tr><tr class="passedodd"><td><a href="#m40">signup_SilverYearly_Stage</a></td><td rowspan="1">1716213181097</td><td rowspan="1">70917</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">prod.Alerts</td><td><a href="#m0">create_Alert_Prod</a></td><td rowspan="1">1716549248558</td><td rowspan="1">93985</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">dev.SignupDev#signup_GoldMonthly_Dev</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldMonthly_Dev_20_05_2024_07_34_23.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldMonthly_Dev_20_05_2024_07_34_23.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:51502}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51502/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e1d85f0bf36209c9dda42159ebe5c4b
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at dev.SignupDev.signup_GoldMonthly_Dev(SignupDev.java:196)
+<h2>Default test</h2><h3 id="m0">prod.Alerts#create_Alert_Prod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.info(String, com.aventstack.extentreports.MediaEntityModelProvider)&quot; because the return value of &quot;java.lang.ThreadLocal.get()&quot; is null
+	at listeners.ExtentReportListener.screenshot(ExtentReportListener.java:140)
+	at prod.Alerts.create_Alert_Prod(Alerts.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">dev.SignupDev#signup_GoldYearly_Dev</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldYearly_Dev_20_05_2024_07_31_43.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldYearly_Dev_20_05_2024_07_31_43.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:51247}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51247/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 300b24e3790190b6cb921cd4dfa73779
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at dev.SignupDev.signup_GoldYearly_Dev(SignupDev.java:116)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">dev.SignupDev#signup_SilverMonthly_Dev</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverMonthly_Dev_20_05_2024_07_33_02.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverMonthly_Dev_20_05_2024_07_33_02.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:51371}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51371/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc4d0461e2dd600d5fee604c46ebb2e2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at dev.SignupDev.signup_SilverMonthly_Dev(SignupDev.java:156)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">dev.SignupDev#signup_SilverYearly_Dev</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverYearly_Dev_20_05_2024_07_30_22.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverYearly_Dev_20_05_2024_07_30_22.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50983}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50983/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4212b0b296d837c7d6d174f49db56af9
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at dev.SignupDev.signup_SilverYearly_Dev(SignupDev.java:78)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">prod.Regression#Check_Map_Page_Destinations</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\Check_Map_Page_Destinations_20_05_2024_07_07_55.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\Check_Map_Page_Destinations_20_05_2024_07_07_55.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;destination-country-wrap&apos;])[92]&quot;}
-  (Session info: MicrosoftEdge=125.0.2535.51)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [12f97a89b25103e7c90e4b04e9a92d28, findElement {value=(//div[@class=&apos;destination-country-wrap&apos;])[92], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64653}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64653/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 12f97a89b25103e7c90e4b04e9a92d28
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.flightfinder.pomrepo.MapPage.getSelectDestination(MapPage.java:103)
-	at prod.Regression.Check_Map_Page_Destinations(Regression.java:523)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">stage.SignupStage#signup_GoldMonthly_Stage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldMonthly_Stage_20_05_2024_07_28_15.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldMonthly_Stage_20_05_2024_07_28_15.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50634}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50634/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c3d810af95e56e352d3dcb89443ad578
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at stage.SignupStage.signup_GoldMonthly_Stage(SignupStage.java:196)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">stage.SignupStage#signup_GoldYearly_Stage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldYearly_Stage_20_05_2024_07_25_31.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_GoldYearly_Stage_20_05_2024_07_25_31.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50367}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50367/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c1ef6814f23bf1cb9179be0899941a4d
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at stage.SignupStage.signup_GoldYearly_Stage(SignupStage.java:116)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">stage.SignupStage#signup_SilverMonthly_Stage</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages"><a href='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverMonthly_Stage_20_05_2024_07_26_53.png'> <img src='C:\Users\wbox42\eclipse-workspace\FlightFinder\target\surefire-reports\failure_screenshots\signup_SilverMonthly_Stage_20_05_2024_07_26_53.png' height='100' width='100'/> </a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id=&apos;exp_month&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50501}, msedge: {msedgedriverVersion: 125.0.2535.51 (b1bc6e892654..., userDataDir: C:\Users\wbox42\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50501/devtoo..., se:cdpVersion: 125.0.2535.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a168afd8f637dd98e496cd3a65ae24c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
-	at com.flightfinder.pomrepo.SignUpElements.getExpiryTextField(SignUpElements.java:216)
-	at stage.SignupStage.signup_SilverMonthly_Stage(SignupStage.java:156)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">dev.SignupDev#signup_Bronze_Dev</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">prod.Alerts#create_Alert_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">prod.Alerts#delete_Alert_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">prod.Alerts#edit_Alert_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">prod.Membership_Restrictions#Check_bronze_mapPage_restrictions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">prod.Membership_Restrictions#check_five_alert_restriction_silver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">prod.Membership_Restrictions#check_one_alert_restriction_bronze</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">prod.Membership_Restrictions#date_range_restrictions_bronze</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">prod.Membership_Restrictions#date_range_restrictions_silver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">prod.Regression#ApplestoreProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">prod.Regression#AppstoreImage_Check_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">prod.Regression#Check_bronze_mapPage_restrictions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m20">prod.Regression#GooglePlayProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m21">prod.Regression#GuestuserProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m22">prod.Regression#InstagramProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m23">prod.Regression#KbarHeaderProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m24">prod.Regression#LinkedinProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m25">prod.Regression#TwitterProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m26">prod.Regression#check_five_alert_restriction_silver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m27">prod.Regression#check_one_alert_restriction_bronze</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m28">prod.Regression#facebookProd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m29">prod.Regression#login_Invalid_Credentials_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m30">prod.Regression#login_Valid_Credentials_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m31">prod.Regression#login_With_Facebook_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m32">prod.Regression#popularArticles_Check_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m33">prod.Regression#popularBlogs_Check_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m34">prod.Regression#popularTopics_Check_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m35">prod.Regression#signup_Bronze_Prod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m36">stage.Alerts#create_Alert_Stage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m37">stage.Alerts#delete_Alert_Stage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m38">stage.Alerts#edit_Alert_Stage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m39">stage.SignupStage#signup_Bronze_Stage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m40">stage.SignupStage#signup_SilverYearly_Stage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
