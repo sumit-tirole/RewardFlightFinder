@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="stage.SignupStage">
+      <class name="prod.Alerts">
         <methods>
-          <include name="signup_SilverYearly_Stage"/>
+          <include name="delete_Alert_Prod"/>
+          <include name="create_Alert_Prod"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
+          <include name="edit_Alert_Prod"/>
         </methods>
-      </class> <!-- stage.SignupStage -->
+      </class> <!-- prod.Alerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
