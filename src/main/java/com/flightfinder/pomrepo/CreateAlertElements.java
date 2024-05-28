@@ -25,7 +25,7 @@ public class CreateAlertElements {
 		wait.until(ExpectedConditions.elementToBeClickable(element));	
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		try {
-		Thread.sleep(1000); }
+		Thread.sleep(2000); }
 		catch (InterruptedException e) {
 		e.printStackTrace();	
 		}
