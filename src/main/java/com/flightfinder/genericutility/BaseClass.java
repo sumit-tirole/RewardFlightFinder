@@ -37,12 +37,7 @@ public class BaseClass {
 		String browserName = fileUtils.readFromPropertyFile("browser");
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--lang=en-US");
-	        options.addArguments("--remote-allow-origins=*");
-	        options.addArguments("--headless");
-	        options.addArguments("--disable-extensions"); // disabling extensions
-	        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-	        options.addArguments("--no-sandbox");
+			options.addArguments("--headless");
 	        options.addArguments("--window-size=" + windowSize);
 //	        System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\chromedriver.exe");
 			driver = new ChromeDriver(options);
@@ -68,8 +63,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(5));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-	    
+			    
 		}
 		
 	//Executing after test
