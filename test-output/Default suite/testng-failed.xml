@@ -5,11 +5,9 @@
     <classes>
       <class name="prod.Alerts">
         <methods>
-          <include name="delete_Alert_Prod"/>
           <include name="create_Alert_Prod"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="edit_Alert_Prod"/>
         </methods>
       </class> <!-- prod.Alerts -->
     </classes>
