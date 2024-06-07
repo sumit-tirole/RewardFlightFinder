@@ -12,12 +12,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
 import com.flightfinder.pomrepo.CreateAlertElements;
 import com.flightfinder.pomrepo.MapPage;
-
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
 
@@ -30,7 +28,7 @@ public class Membership_Restrictions extends BaseClass {
 	
 	
 	
-	@Test(priority=1, enabled = true)
+	@Test(priority=1, enabled = true, description = "Alert date range Restrictions for Bronze user")
 	public void date_range_restrictions_bronze() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -76,7 +74,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getLogoutButton().click();
 		}	
 		
-	@Test(priority=2, enabled = true)
+	@Test(priority=2, enabled = true, description = "Alert date range Restrictions for Silver user")
 	public void date_range_restrictions_silver() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -121,7 +119,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getLogoutButton().click();
 		}
 		
-	@Test(priority=20 , enabled=true)
+	@Test(priority=3 , enabled=true, description = "Map page0 Restrictions for Bronze user")
 	public void Check_bronze_mapPage_restrictions() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
@@ -169,7 +167,7 @@ public class Membership_Restrictions extends BaseClass {
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Upgrade membership validation");
 	}
 		
-	@Test(priority=21, enabled = true)
+	@Test(priority=4, enabled = true, description = "One Active alert Restriction for bronze user")
 	public void check_one_alert_restriction_bronze() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -224,7 +222,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getLogoutButton().click();
 		}
 		
-	@Test(priority=22, enabled = true)
+	@Test(priority=5, enabled = true, description = "Five Active Alert Restriction for Silver user")
 	public void check_five_alert_restriction_silver() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -273,6 +271,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
 		}
+	
 	
 }
 	

@@ -37,7 +37,7 @@ public class Regression extends BaseClass {
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	
 		
-	@Test(priority=1, enabled = true)
+	@Test(priority=1, enabled = true, description = "Login using invalid credentials")
 	public void login_Invalid_Credentials_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -57,7 +57,7 @@ public class Regression extends BaseClass {
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Invalid Login validation");
 	}
 	
-	@Test(priority=2, enabled = true)
+	@Test(priority=2, enabled = true, description = "Login using valid credentials")
 	public void login_Valid_Credentials_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -81,7 +81,7 @@ public class Regression extends BaseClass {
 		
 	}
 		
-	@Test(priority=3, enabled = false)
+	@Test(priority=3, enabled = false, description = "Login using gmail on prod environment")
 	public void login_With_Google_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -124,7 +124,7 @@ public class Regression extends BaseClass {
 		
 	}
 	
-	@Test(priority=4, enabled = false) 
+	@Test(priority=4, enabled = false, description = "Alert date range Restrictions for Silver user") 
 	public void login_With_Facebook_Prod() throws Throwable{
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -170,7 +170,7 @@ public class Regression extends BaseClass {
 		
 	}
 	
-	@Test(enabled = false, priority=5) 
+	@Test(enabled = false, priority=5, description = "Login with apple id on prod environment") 
 	public void login_With_Apple_Prod() throws Throwable{
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -214,7 +214,7 @@ public class Regression extends BaseClass {
 	}
 		
 	
-	@Test(priority=6 , enabled=true)
+	@Test(priority=6 , enabled=true, description = "Signup as a Bronze user on prod environment")
 	public void signup_Bronze_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("bronzeurl"));}
 		catch(WebDriverException e) {}
@@ -241,7 +241,7 @@ public class Regression extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=7 , enabled=true)
+	@Test(priority=7 , enabled=true, description = "Check visibility of popular articles on prod environment")
 	public void popularArticles_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
@@ -263,7 +263,7 @@ public class Regression extends BaseClass {
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular articles validation");
 	}
 	
-	@Test(priority=8 , enabled=true)
+	@Test(priority=8 , enabled=true, description = "Check visibility of popular topics on prod environment")
 	public void popularTopics_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
@@ -284,7 +284,7 @@ public class Regression extends BaseClass {
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular topics validation");
 	}
 	
-	@Test(priority=9 , enabled=true)
+	@Test(priority=9 , enabled=true, description = "Check visibility of popular blogs on prod environment")
 	public void popularBlogs_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
@@ -305,7 +305,7 @@ public class Regression extends BaseClass {
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for popular blogs validation");
 	}
 	
-	@Test(priority=10 , enabled=true)
+	@Test(priority=10 , enabled=true, description = "Check visibility of Appstore logo")
 	public void AppstoreImage_Check_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}
@@ -325,7 +325,7 @@ public class Regression extends BaseClass {
 	
 	}
 	
-@Test(priority=11 , enabled=true)
+@Test(priority=11 , enabled=true, description = "Check visibility of Kbar")
 public void KbarHeaderProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -336,7 +336,7 @@ public void KbarHeaderProd() throws Throwable {
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Kbar header validation");
 }
 
-@Test(priority=12 , enabled=true)
+@Test(priority=12 , enabled=true, description = "Check visibility signup banner to guest user on Calender page")
 public void GuestuserProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
@@ -365,7 +365,7 @@ public void GuestuserProd() throws Throwable {
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for guest user restrictions");
 }
 
-@Test(priority=13 , enabled=true)
+@Test(priority=13 , enabled=true, description = "Check facebook link redirection")
 public void facebookProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -397,7 +397,7 @@ public void facebookProd() throws Throwable {
 
 
 
-@Test(priority=14 , enabled=true)
+@Test(priority=14 , enabled=true, description = "Check twitter link redirection")
 public void TwitterProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -429,7 +429,7 @@ public void TwitterProd() throws Throwable {
 }
 
 
-@Test(priority=15 , enabled=true)
+@Test(priority=15 , enabled=true, description = "Check linkedin link redirection")
 public void LinkedinProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -462,7 +462,7 @@ public void LinkedinProd() throws Throwable {
 	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for linkedin redirection validation");
 }
 
-@Test(priority=16 , enabled=true)
+@Test(priority=16 , enabled=true, description = "Check Instagram link redirection")
 public void InstagramProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -494,7 +494,7 @@ public void InstagramProd() throws Throwable {
 
 
 
-@Test(priority=17 , enabled=true)
+@Test(priority=17 , enabled=true, description = "Check Google play link redirection")
 public void GooglePlayProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -524,7 +524,7 @@ public void GooglePlayProd() throws Throwable {
 }
 
 
-@Test(priority=18 , enabled=true)
+@Test(priority=18 , enabled=true, description = "Check Applestore link redirection")
 public void ApplestoreProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -553,7 +553,7 @@ public void ApplestoreProd() throws Throwable {
 	}
 	
 	
-@Test(priority=19 , enabled=true)
+@Test(priority=19 , enabled=true, description = "Check Map page destinations")
 public void Check_Map_Page_Destinations() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
@@ -600,160 +600,7 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	element.getLogoutButton().click();
 	}
 	
-@Test(priority=20 , enabled=true)
-public void Check_bronze_mapPage_restrictions() throws Throwable {
-	try {driver.get(fileUtils.readFromPropertyFile("url"));
-	}
-	catch(WebDriverException e) {}
-	CreateAlertElements element = new CreateAlertElements(driver);
-	MapPage element1 = new MapPage(driver);
-	try{
-        element.getAcceptCookies().click();}
-    catch(WebDriverException e) {
-        element.getAcceptCookies().click();
-    }
-	element.getSignInLink().click();
-	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
-	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
-	element.getSignInButton().click();
-	
-	for (int i = 0; i < 3; i++) {
-	    try {element1.getWorldMapButton().click();
-	        break;} 
-	    catch (StaleElementReferenceException e) {}}
-	
-	try {
-	    waitForLoader();
-	} catch (TimeoutException e) {
-	    
-	}
-	
-	Actions action = new Actions(driver);
-	action.click(element1.getWhereFromField()).pause(1000).sendKeys("london" , Keys.ENTER).build().perform();
-	element1.getDateField().click();
-	element1.getNextMonth().click();
-	element1.getStartDate().click();
-	element1.getEndDate().click();
-	element1.getStartDate().click();
-	element1.getEndDate().click();
-	element1.getSetDatesButton().click();
-	element1.getSearchButton().click();
-	Assert.assertEquals(element1.getUpgradeMembershipPopup().getText(),"You need to be a Silver or Gold member to use the world map search");
-	Assert.assertEquals(element1.getMembershipsButton().isDisplayed(),true);
-	System.out.println(element1.getUpgradeMembershipPopup().getText());
-	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-	element1.getCloseButton().click();
-	element.getAccountButton().click();
-	element.getLogoutButton().click();
-	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Upgrade membership validation");
-}
-	
-@Test(priority=21, enabled = true)
-public void check_one_alert_restriction_bronze() throws Throwable {
-	try {driver.get(fileUtils.readFromPropertyFile("url"));}
-	catch(WebDriverException e) {}
-	CreateAlertElements element = new CreateAlertElements(driver);
-	try{
-        element.getAcceptCookies().click();}
-    catch(WebDriverException e) {
-        element.getAcceptCookies().click();
-    }
-	element.getSignInLink().click();
-	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
-	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
-	element.getSignInButton().click();
-	Actions action = new Actions(driver);
-	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
-	element.getSearchButton().click();
-		
-	try {
-	    waitForLoader();
-	} catch (TimeoutException e) {
-	    
-	}
-	
-	try {
-	element.getBronzeUpgradePopup().click(); }
-	catch (NoSuchElementException e) { }
-	
-	element.getCreateAlertButton().click();
-	element.getDepartStartDate().click();
-	element.getNextMonth().click();
-	element.getStartDate().click();
-	element.getEndDate().click();
-	element.getreturnStartDate().click();
-	element.getNextMonth().click();
-	element.getStartDate().click();
-	element.getEndDate().click();
-	element.getCreateAlertButtonPopup().click();
-	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
-	String actualPopupText = element.getBronzeUpgradePopup2().getText();
-	String expectedPopText = "You can only have 1 active alert at once. Please either delete the existing active alert or upgrade your membership";
-	Assert.assertEquals(actualPopupText, expectedPopText);
-	element.getUpgradeButton().click();
-	Thread.sleep(1000);
-	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
-	try {
-	    waitForLoader();
-	} catch (TimeoutException e) {
-	    
-	}
-	element.getAccountButton().click();
-	element.getLogoutButton().click();
-	}
-	
-@Test(priority=22, enabled = true)
-public void check_five_alert_restriction_silver() throws Throwable {
-	try {driver.get(fileUtils.readFromPropertyFile("url"));}
-	catch(WebDriverException e) {}
-	CreateAlertElements element = new CreateAlertElements(driver);
-	try{
-        element.getAcceptCookies().click();}
-    catch(WebDriverException e) {
-        element.getAcceptCookies().click();
-    }
-	element.getSignInLink().click();
-	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
-	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));
-	element.getSignInButton().click();
-	Actions action = new Actions(driver);
-	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
-	element.getSearchButton().click();
-	try {
-	    waitForLoader();
-	} catch (TimeoutException e) {
-	    
-	}
-		
-	element.getCreateAlertButton().click();
-	element.getDepartStartDate().click();
-	element.getNextMonth().click();
-	element.getStartDate().click();
-	element.getEndDate().click();
-	element.getreturnStartDate().click();
-	element.getNextMonth().click();
-	element.getStartDate().click();
-	element.getEndDate().click();
-	element.getCreateAlertButtonPopup().click();
-	String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for upgrade membership validation");
-	String actualPopupText = element.getBronzeUpgradePopup2().getText();
-	System.out.println(actualPopupText);
-	String expectedPopText = "You can only have 5 active alerts at once. Please either delete one of your other active alerts, or upgrade your membership";
-	Assert.assertEquals(actualPopupText, expectedPopText);
-	element.getUpgradeButton().click();
-	try {
-	    waitForLoader();
-	} catch (TimeoutException e) {
-	    
-	}
-	Assert.assertEquals(driver.getCurrentUrl(),"https://rewardflightfinder.com/pricing");
-	element.getAccountButton().click();
-	element.getLogoutButton().click();
-	}
 
-	
 }
 	
 	
