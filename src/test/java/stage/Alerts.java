@@ -26,7 +26,7 @@ public class Alerts extends BaseClass {
 	
 	
 	
-	@Test(priority=1, enabled = true)
+	@Test(priority=1, enabled = true, description = "Create Alert on stage environment")
 	public void create_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -70,7 +70,7 @@ public class Alerts extends BaseClass {
 		}	
 	
 	
-	@Test(priority=2, enabled = true)
+	@Test(priority=2, enabled = true, description = "Edit Alert on stage environment")
 	public void edit_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -103,7 +103,7 @@ element.getSignInButton().click();
 		element.getLogoutButton().click();
 	}
 	
-	@Test(priority=3, enabled = true)
+	@Test(priority=3, enabled = true, description = "Delete Alert on stage environment")
 	public void delete_Alert_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
