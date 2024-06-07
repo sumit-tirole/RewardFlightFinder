@@ -1,58 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-30T09:57:48 IST" name="Default suite" finished-at="2024-05-30T09:59:09 IST" duration-ms="80979">
+  <suite started-at="2024-06-07T12:38:40 IST" name="Default suite" finished-at="2024-06-07T12:42:12 IST" duration-ms="211430">
     <groups>
     </groups>
-    <test started-at="2024-05-30T09:57:48 IST" name="Default test" finished-at="2024-05-30T09:59:09 IST" duration-ms="80979">
+    <test started-at="2024-06-07T12:38:40 IST" name="Default test" finished-at="2024-06-07T12:42:12 IST" duration-ms="211430">
       <class name="prod.Alerts">
-        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@4c550889]" started-at="2024-05-30T09:57:48 IST" name="preConditions" finished-at="2024-05-30T09:57:50 IST" duration-ms="2475" status="PASS">
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:38:40 IST" name="preConditions" finished-at="2024-06-07T12:38:43 IST" duration-ms="2354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method signature="create_Alert_Prod()[pri:1, instance:prod.Alerts@4c550889]" started-at="2024-05-30T09:57:50 IST" name="create_Alert_Prod" finished-at="2024-05-30T09:59:07 IST" duration-ms="76597" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.info(String, com.aventstack.extentreports.MediaEntityModelProvider)" because the return value of "java.lang.ThreadLocal.get()" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.info(String, com.aventstack.extentreports.MediaEntityModelProvider)" because the return value of "java.lang.ThreadLocal.get()" is null
-at listeners.ExtentReportListener.screenshot(ExtentReportListener.java:140)
-at prod.Alerts.create_Alert_Prod(Alerts.java:65)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="create_Alert_Prod()[pri:1, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:38:43 IST" name="create_Alert_Prod" finished-at="2024-06-07T12:40:01 IST" duration-ms="78174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- create_Alert_Prod -->
-        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@4c550889]" started-at="2024-05-30T09:59:07 IST" name="postConditions" finished-at="2024-05-30T09:59:09 IST" duration-ms="1833" status="PASS">
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:40:01 IST" name="postConditions" finished-at="2024-06-07T12:40:03 IST" duration-ms="2051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:40:03 IST" name="preConditions" finished-at="2024-06-07T12:40:04 IST" duration-ms="1386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="edit_Alert_Prod()[pri:2, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:40:04 IST" name="edit_Alert_Prod" finished-at="2024-06-07T12:41:10 IST" duration-ms="65180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_Alert_Prod -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:41:10 IST" name="postConditions" finished-at="2024-06-07T12:41:12 IST" duration-ms="1973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:41:12 IST" name="preConditions" finished-at="2024-06-07T12:41:13 IST" duration-ms="1519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="delete_Alert_Prod()[pri:3, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:41:13 IST" name="delete_Alert_Prod" finished-at="2024-06-07T12:42:10 IST" duration-ms="56692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_Alert_Prod -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:prod.Alerts@44e3a2b2]" started-at="2024-06-07T12:42:10 IST" name="postConditions" finished-at="2024-06-07T12:42:12 IST" duration-ms="2024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postConditions -->

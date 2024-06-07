@@ -42,7 +42,11 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys("ABC@123");
@@ -58,7 +62,11 @@ public class Regression extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
@@ -79,7 +87,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		GoogleLogin element1 = new GoogleLogin(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element1.getGoogleSignInButton().click();
 		Thread.sleep(2000);
@@ -118,7 +130,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		FacebookLogin element1 = new FacebookLogin(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element1.getFbSignInButton().click();
 		Thread.sleep(2000);
@@ -161,7 +177,11 @@ public class Regression extends BaseClass {
 		CreateAlertElements element = new CreateAlertElements(driver);
 		AppleLogin element1 = new AppleLogin(driver);
 		
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element1.getAppleSignInButton().click();
 		Set<String> windows= driver.getWindowHandles();
@@ -200,7 +220,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		String email = "TestBronzeProd"+String.valueOf((int) (Math.random() * 9000) + 1000)+"@ymail.com";
 		element.getEmailTextField().sendKeys(email);
         element.getContinueButton().click();
@@ -224,7 +248,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		ProdElements element1 = new ProdElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element1.getArticlesIcon().click();
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		Assert.assertEquals(element1.getPopularArticles().isDisplayed(), true);
@@ -242,7 +270,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		ProdElements element1 = new ProdElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularTopics().isDisplayed(), true);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -259,7 +291,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		ProdElements element1 = new ProdElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element1.getArticlesIcon().click();
 		Assert.assertEquals(element1.getPopularBlogs().isDisplayed(), true);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -276,7 +312,11 @@ public class Regression extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		ProdElements element1 = new ProdElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		((JavascriptExecutor) driver).executeScript
 		("arguments[0].scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });", element1.getAppstoreImage());
 		Assert.assertEquals(element1.getAppstoreImage().isDisplayed(), true);
@@ -302,7 +342,11 @@ public void GuestuserProd() throws Throwable {
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
 	ProdElements element1 = new ProdElements(driver);
-	element.getAcceptCookies().click();
+	try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
 	Actions action = new Actions(driver);
 	action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 	element.getSearchButton().click();
@@ -329,7 +373,11 @@ public void facebookProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-    element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     
 	try {js.executeAsyncScript("arguments[0].click();",element1.getFacebookIcon());}
 	catch (Exception e) {}
@@ -357,7 +405,11 @@ public void TwitterProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-    element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     try {js.executeAsyncScript("arguments[0].click();",element1.getTwitterIcon());}
 	catch (Exception e) {}
 	
@@ -385,7 +437,11 @@ public void LinkedinProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-	element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     	
 	try {js.executeAsyncScript("arguments[0].click();",element1.getlinkedInIcon());}
 	catch (Exception e) {}
@@ -414,7 +470,11 @@ public void InstagramProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-    element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     
 	try {js.executeAsyncScript("arguments[0].click();",element1.getInstagramIcon());}
 	catch (Exception e) {}
@@ -442,7 +502,11 @@ public void GooglePlayProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-    element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     
 	try {js.executeAsyncScript("arguments[0].click();",element1.getPlaystoreImage());}
 	catch (Exception e) {}
@@ -468,7 +532,11 @@ public void ApplestoreProd() throws Throwable {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     CreateAlertElements element = new CreateAlertElements(driver);
     ProdElements element1 = new ProdElements(driver);
-    element.getAcceptCookies().click();
+    try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
     try {js.executeAsyncScript("arguments[0].click();",element1.getApplestoreImage());}
 	catch (Exception e) {}
 	
@@ -492,7 +560,11 @@ public void Check_Map_Page_Destinations() throws Throwable {
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
 	MapPage element1 = new MapPage(driver);
-	element.getAcceptCookies().click();
+	try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
 	element.getSignInLink().click();
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
@@ -535,7 +607,11 @@ public void Check_bronze_mapPage_restrictions() throws Throwable {
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
 	MapPage element1 = new MapPage(driver);
-	element.getAcceptCookies().click();
+	try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
 	element.getSignInLink().click();
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
@@ -577,7 +653,11 @@ public void check_one_alert_restriction_bronze() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
-	element.getAcceptCookies().click();
+	try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
 	element.getSignInLink().click();
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
@@ -628,7 +708,11 @@ public void check_five_alert_restriction_silver() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));}
 	catch(WebDriverException e) {}
 	CreateAlertElements element = new CreateAlertElements(driver);
-	element.getAcceptCookies().click();
+	try{
+        element.getAcceptCookies().click();}
+    catch(WebDriverException e) {
+        element.getAcceptCookies().click();
+    }
 	element.getSignInLink().click();
 	element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
 	element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));

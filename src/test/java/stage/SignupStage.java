@@ -27,7 +27,11 @@ public class SignupStage extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		element.getSignUpButton().click();
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		try {jse.executeAsyncScript("arguments[0].click();",element.getBronzeSubscribeButton());}
@@ -54,7 +58,11 @@ public class SignupStage extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		element.getSignUpButton().click();
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		try {jse.executeAsyncScript("arguments[0].click();",element.getSilverSubscribeButton());}
@@ -92,7 +100,11 @@ public class SignupStage extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		element.getSignUpButton().click();
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		try {jse.executeAsyncScript("arguments[0].click();",element.getGoldSubscribeButton());}
@@ -130,7 +142,11 @@ public class SignupStage extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		element.getSignUpButton().click();
 		WebElement button = driver.findElement(By.xpath("//span[@class='slider round']"));
 		button.click();
@@ -170,7 +186,11 @@ public class SignupStage extends BaseClass {
 		catch(WebDriverException e) {}
 		SignUpElements element = new SignUpElements(driver);
 		CreateAlertElements element1 = new CreateAlertElements(driver);
-		element1.getAcceptCookies().click();
+		try{
+            element1.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element1.getAcceptCookies().click();
+        }
 		element.getSignUpButton().click();
 		WebElement button = driver.findElement(By.xpath("//span[@class='slider round']"));
 		button.click();

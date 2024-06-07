@@ -1,17 +1,13 @@
 package stage;
 
-import java.time.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
@@ -35,7 +31,11 @@ public class Alerts extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));
@@ -77,7 +77,11 @@ public class Alerts extends BaseClass {
 		CreateAlertElements element = new CreateAlertElements(driver);
 		DeleteAlertElements element1 = new DeleteAlertElements(driver);
 		EditAlertElements element2 = new EditAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));
@@ -105,7 +109,11 @@ element.getSignInButton().click();
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		DeleteAlertElements element1 = new DeleteAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("email"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("password"));

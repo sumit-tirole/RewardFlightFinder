@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="prod.Alerts">
+      <class name="stage.Alerts">
         <methods>
-          <include name="create_Alert_Prod"/>
+          <include name="delete_Alert_Stage"/>
+          <include name="edit_Alert_Stage"/>
+          <include name="create_Alert_Stage"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
         </methods>
-      </class> <!-- prod.Alerts -->
+      </class> <!-- stage.Alerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

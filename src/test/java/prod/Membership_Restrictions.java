@@ -35,7 +35,11 @@ public class Membership_Restrictions extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
@@ -77,7 +81,11 @@ public class Membership_Restrictions extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));
@@ -120,7 +128,11 @@ public class Membership_Restrictions extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		MapPage element1 = new MapPage(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
@@ -162,7 +174,11 @@ public class Membership_Restrictions extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
@@ -213,7 +229,11 @@ public class Membership_Restrictions extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));

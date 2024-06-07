@@ -1,6 +1,6 @@
 package prod;
 
-import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -9,8 +9,6 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import com.flightfinder.genericutility.BaseClass;
 import com.flightfinder.genericutility.FileUtility;
@@ -20,7 +18,6 @@ import com.flightfinder.pomrepo.EditAlertElements;
 
 import listeners.ExtentReportListener;
 import listeners.ScreenshotUtility;
-
 
 
 public class Alerts extends BaseClass {
@@ -34,7 +31,11 @@ public class Alerts extends BaseClass {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
@@ -76,7 +77,11 @@ public class Alerts extends BaseClass {
 		CreateAlertElements element = new CreateAlertElements(driver);
 		DeleteAlertElements element1 = new DeleteAlertElements(driver);
 		EditAlertElements element2 = new EditAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
@@ -104,7 +109,11 @@ public class Alerts extends BaseClass {
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
 		DeleteAlertElements element1 = new DeleteAlertElements(driver);
-		element.getAcceptCookies().click();
+		try{
+            element.getAcceptCookies().click();}
+        catch(WebDriverException e) {
+            element.getAcceptCookies().click();
+        }
 		element.getSignInLink().click();
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodpass"));
