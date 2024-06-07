@@ -87,7 +87,7 @@ public class Alerts extends BaseClass {
 		        break;} 
 		    catch (StaleElementReferenceException e) {}}
 			
-		element1.getEditAlertButton().click();
+		element1.getEditAlertButton(outboundDate).click();
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element2.getAddPassengersButton()).pause(1000).click().perform();
 		element2.getSaveButton().click();
@@ -113,7 +113,7 @@ public class Alerts extends BaseClass {
 		    try {element1.getAlertButton().click();
 		        break;} 
 		    catch (StaleElementReferenceException e) {}}
-		element1.getEditAlertButton().click();
+		element1.getEditAlertButton(outboundDate).click();
 		element1.getDeleteButton().click();
 		element1.getDeleteButton().click();
 		System.out.println(element.getAlertmsg().getText());
