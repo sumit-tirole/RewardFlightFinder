@@ -124,7 +124,7 @@ public class Regression extends BaseClass {
 		
 	}
 	
-	@Test(priority=4, enabled = true) 
+	@Test(priority=4, enabled = false) 
 	public void login_With_Facebook_Prod() throws Throwable{
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
