@@ -26,7 +26,7 @@ public class Alerts extends BaseClass {
 	public Logger log = LogManager.getLogger(Alerts.class);
 	
 		
-	@Test(priority=1, enabled = true, description = "Create an Alert on prod environment")
+	@Test(priority=1, enabled = true, description="Create an Alert on prod environment")
 	public void create_Alert_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -70,7 +70,7 @@ public class Alerts extends BaseClass {
 		}	
 	
 	
-	@Test(priority=2, enabled = true, description = "Edit an Alert on prod environment")
+	@Test(priority=2, enabled = true, description="Edit an Alert on prod environment")
 	public void edit_Alert_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
@@ -103,7 +103,7 @@ public class Alerts extends BaseClass {
 		element.getLogoutButton().click();
 	}
 	
-	@Test(priority=3, enabled = true, description = "Delete an Alert on prod environment")
+	@Test(priority=3, enabled = true, description="Delete an Alert on prod environment")
 	public void delete_Alert_Prod() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}

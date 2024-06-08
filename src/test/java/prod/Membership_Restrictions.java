@@ -119,7 +119,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getLogoutButton().click();
 		}
 		
-	@Test(priority=3 , enabled=true, description = "Map page0 Restrictions for Bronze user")
+	@Test(priority=3 , enabled=true, description = "Map page Restrictions for Bronze user")
 	public void Check_bronze_mapPage_restrictions() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("url"));
 		}

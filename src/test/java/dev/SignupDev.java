@@ -22,7 +22,7 @@ public class SignupDev extends BaseClass {
 	public static String outboundDate;
 	public Logger log = LogManager.getLogger(SignupDev.class);
 		
-	@Test(priority=1, enabled = true, description = "Signup as a Bronze user on dev environment")
+	@Test(priority=1, enabled = true, description="Signup as a Bronze user on Dev environment" )
 	public void signup_Bronze_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
@@ -58,7 +58,7 @@ public class SignupDev extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
         }
 	
-	@Test(priority=2, enabled = true, description = "Signup as a Silver Yearly user on dev environment")
+	@Test(priority=2, enabled = true, description="Signup as a Silver Yearly user on dev environment")
 	public void signup_SilverYearly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
@@ -105,7 +105,7 @@ public class SignupDev extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=3, enabled = true, description = "Signup as a Gold Yearly user on dev environment")
+	@Test(priority=3, enabled = true, description="Signup as a Gold Yearly user on dev environment")
 	public void signup_GoldYearly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
@@ -152,7 +152,7 @@ public class SignupDev extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=4, enabled = true, description = "Signup as a Silver Monthly user on dev environment")
+	@Test(priority=4, enabled = true, description="Signup as a Silver Monthly user on dev environment")
 	public void signup_SilverMonthly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}
@@ -201,7 +201,7 @@ public class SignupDev extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=5, enabled = true, description = "Signup as a Gold Monthly user on dev environment")
+	@Test(priority=5, enabled = true, description="Signup as a Gold Monthly user on dev environment")
 	public void signup_GoldMonthly_Dev() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("devurl"));}
 		catch(WebDriverException e) {}

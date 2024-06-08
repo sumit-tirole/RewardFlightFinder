@@ -524,7 +524,7 @@ public void GooglePlayProd() throws Throwable {
 }
 
 
-@Test(priority=18 , enabled=true, description = "Check Applestore link redirection")
+@Test(priority=18 , enabled=true, description = "Check Apple store link redirection")
 public void ApplestoreProd() throws Throwable {
 	try {driver.get(fileUtils.readFromPropertyFile("url"));
 	}
