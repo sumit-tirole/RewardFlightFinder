@@ -98,7 +98,6 @@ public class Alerts extends BaseClass {
 		actions.moveToElement(element2.getAddPassengersButton()).pause(1000).click().perform();
 		element2.getSaveButton().click();
 		System.out.println(element2.getConfirmEditAlert().getText());
-		Assert.assertEquals(true,false);
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
 		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert Edited validation");
 		element.getAccountButton().click();
