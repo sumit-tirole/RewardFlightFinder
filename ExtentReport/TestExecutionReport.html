@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 8, 2024 11:15:36 am</span></a>
+<a href="#"><span class="badge badge-primary">Jun 8, 2024 10:32:03 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +85,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Create alert on prod</p>
+            <p class="name">Create an Alert on prod environment</p>
             <p class="text-sm">
-              <span>11:15:39 am</span> / <span>00:01:39:648</span>
+              <span>10:32:05 pm</span> / <span>00:01:47:047</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +95,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Create alert on prod</h5>
-<span class='badge badge-success'>06.08.2024 11:15:39 am</span>
-<span class='badge badge-danger'>06.08.2024 11:17:18 am</span>
-<span class='badge badge-default'>00:01:39:648</span>
+<h5 class="test-status text-pass">Create an Alert on prod environment</h5>
+<span class='badge badge-success'>06.08.2024 10:32:05 pm</span>
+<span class='badge badge-danger'>06.08.2024 10:33:52 pm</span>
+<span class='badge badge-default'>00:01:47:047</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -104,18 +110,18 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:17:11 am</td>
+        <td>10:33:45 pm</td>
         <td>
           Screenshot for Alert created validation
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111711.png' src="C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111711.png">
+<img data-featherlight='../test-output/screenshots/20240608_223345.png' src="../test-output/screenshots/20240608_223345.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:17:18 am</td>
+        <td>10:33:52 pm</td>
         <td>
           Test Passed
         </td>
@@ -125,50 +131,85 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Edit alert on prod</p>
+            <p class="name">Edit an Alert on prod environment</p>
             <p class="text-sm">
-              <span>11:17:21 am</span> / <span>00:00:36:588</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:33:55 pm</span> / <span>00:00:32:947</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Edit alert on prod</h5>
-<span class='badge badge-success'>06.08.2024 11:17:21 am</span>
-<span class='badge badge-danger'>06.08.2024 11:17:58 am</span>
-<span class='badge badge-default'>00:00:36:588</span>
+<h5 class="test-status text-fail">Edit an Alert on prod environment</h5>
+<span class='badge badge-success'>06.08.2024 10:33:55 pm</span>
+<span class='badge badge-danger'>06.08.2024 10:34:28 pm</span>
+<span class='badge badge-default'>00:00:32:947</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../failure_screenshots/20240608_223428.png' src="../failure_screenshots/20240608_223428.png">
+    <div class="title">Screenshot on failure</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:17:53 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:34:28 pm</td>
         <td>
-          Screenshot for Alert Edited validation
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111753.png' src="C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111753.png">
-    
-    </div></div>
+          Test Failed
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:17:58 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:34:28 pm</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1066)
+	at org.testng.Assert.assertEquals(Assert.java:1030)
+	at org.testng.Assert.assertEquals(Assert.java:1076)
+	at prod.Alerts.edit_Alert_Prod(Alerts.java:101)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -181,9 +222,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Delete alert on prod</p>
+            <p class="name">Delete an Alert on prod environment</p>
             <p class="text-sm">
-              <span>11:18:00 am</span> / <span>00:00:34:720</span>
+              <span>10:34:31 pm</span> / <span>00:00:41:162</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -191,10 +232,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Delete alert on prod</h5>
-<span class='badge badge-success'>06.08.2024 11:18:00 am</span>
-<span class='badge badge-danger'>06.08.2024 11:18:35 am</span>
-<span class='badge badge-default'>00:00:34:720</span>
+<h5 class="test-status text-pass">Delete an Alert on prod environment</h5>
+<span class='badge badge-success'>06.08.2024 10:34:31 pm</span>
+<span class='badge badge-danger'>06.08.2024 10:35:12 pm</span>
+<span class='badge badge-default'>00:00:41:162</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -206,18 +247,18 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:18:31 am</td>
+        <td>10:35:08 pm</td>
         <td>
           Screenshot for Alert deleted validation
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111831.png' src="C:\Users\91999\Desktop\RFF\RewardFlightFinder\RewardFlightFinder\test-output\screenshots\20240608_111831.png">
+<img data-featherlight='../test-output/screenshots/20240608_223508.png' src="../test-output/screenshots/20240608_223508.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:18:35 am</td>
+        <td>10:35:12 pm</td>
         <td>
           Test Passed
         </td>
@@ -236,30 +277,79 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:33:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Edit an Alert on prod environment</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 8, 2024 11:15:36 am</h3>
+<h3>Jun 8, 2024 10:32:03 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 8, 2024 11:18:37 am</h3>
+<h3>Jun 8, 2024 10:35:14 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>3</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -275,12 +365,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>3</b> tests passed
+<div><small data-tooltip='66%'>
+<b>2</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='33%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -298,10 +388,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>3</b> events passed</small></div>
+<div><small data-tooltip='33%'><b>2</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>3</b> others
+<small data-tooltip='33%'><b>2</b> events failed,
+<b data-tooltip='%'>2</b> others
 </small>
 </div>
 </div>
@@ -317,7 +407,7 @@
 </div></div>
 <script>
 var timeline = {
-"Create alert on prod":99.648,"Edit alert on prod":36.588,"Delete alert on prod":34.72
+"Create an Alert on prod environment":107.047,"Edit an Alert on prod environment":32.947,"Delete an Alert on prod environment":41.162
 };
 </script>
 <div class="row">
@@ -348,8 +438,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 0,
+passParent: 2,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -365,11 +455,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 3,
-failEvents: 0,
+passEvents: 2,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 3
+infoEvents: 2
 };
 </script>        </div>
       </div>

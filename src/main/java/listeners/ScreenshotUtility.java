@@ -16,7 +16,9 @@ public class ScreenshotUtility {
     public static String captureScreenshot(WebDriver driver) {
         try {
             // Capture screenshot as bytes
-            byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            TakesScreenshot tss = (TakesScreenshot)driver;
+
+            File tempFile = tss.getScreenshotAs(OutputType.FILE);
 
             // Create directory if not exists
             createDirectory("test-output/screenshots");
@@ -26,9 +28,10 @@ public class ScreenshotUtility {
 
             // Save screenshot to file
             File screenshotFile = new File("test-output/screenshots/" + fileName + ".png");
-            FileUtils.writeByteArrayToFile(screenshotFile, screenshotBytes);
+            FileUtils.copyFile(tempFile,screenshotFile);
 
-            return screenshotFile.getAbsolutePath();
+
+            return "../test-output/screenshots/" + fileName + ".png";
         } catch (IOException e) {
             e.printStackTrace();
             return null;

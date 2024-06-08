@@ -4,11 +4,21 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.flightfinder.genericutility.BaseClass;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
+import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
 public class ExtentReportListener implements ITestListener {
 	private static ExtentReports extent;
@@ -48,6 +58,20 @@ public class ExtentReportListener implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		test.get().log(Status.FAIL, "Test Failed");
 		test.get().log(Status.FAIL, result.getThrowable());
+		File scrFile = ((TakesScreenshot) BaseClass.getDriver()).getScreenshotAs(OutputType.FILE);
+		try {
+			String fileName = generateFileName();
+			File destFile = new File("failure_screenshots/" + fileName + ".png");
+			FileUtils.copyFile(scrFile, destFile);
+
+			// Add screenshot to the report
+			test.get().addScreenCaptureFromPath("../failure_screenshots/" + fileName + ".png", "Screenshot on failure");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+
 	}
 
 	@Override
@@ -66,5 +90,13 @@ public class ExtentReportListener implements ITestListener {
 
 	public static void screenshot(String screenshotPath1,String message) throws IOException {
 		test.get().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath1).build());
+
 	}
+
+	private static String generateFileName() {
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+		return now.format(formatter);
+	}
+
 }
