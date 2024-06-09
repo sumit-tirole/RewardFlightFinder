@@ -58,20 +58,8 @@ public class ExtentReportListener implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		test.get().log(Status.FAIL, "Test Failed");
 		test.get().log(Status.FAIL, result.getThrowable());
-		File scrFile = ((TakesScreenshot) BaseClass.getDriver()).getScreenshotAs(OutputType.FILE);
-		try {
-			String fileName = generateFileName();
-			File destFile = new File("failure_screenshots/" + fileName + ".png");
-			FileUtils.copyFile(scrFile, destFile);
-
-			// Add screenshot to the report
-			test.get().addScreenCaptureFromPath("../failure_screenshots/" + fileName + ".png", "Screenshot on failure");
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-
+		String screenshotBase64 = ((TakesScreenshot) BaseClass.getDriver()).getScreenshotAs(OutputType.BASE64);
+		test.get().info("Failed step: ",MediaEntityBuilder.createScreenCaptureFromBase64String("data:image/png;base64,"+screenshotBase64).build());
 	}
 
 	@Override
@@ -89,8 +77,8 @@ public class ExtentReportListener implements ITestListener {
 	}
 
 	public static void screenshot(String screenshotPath1,String message) throws IOException {
-		test.get().info(message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath1).build());
 
+		test.get().info(message,MediaEntityBuilder.createScreenCaptureFromBase64String("data:image/png;base64,"+screenshotPath1).build());
 	}
 
 	private static String generateFileName() {

@@ -10,44 +10,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Base64;
 
 public class ScreenshotUtility {
 
     public static String captureScreenshot(WebDriver driver) {
-        try {
-            // Capture screenshot as bytes
-            TakesScreenshot tss = (TakesScreenshot)driver;
-
-            File tempFile = tss.getScreenshotAs(OutputType.FILE);
-
-            // Create directory if not exists
-            createDirectory("test-output/screenshots");
-
-            // Generate unique file name
-            String fileName = generateFileName();
-
-            // Save screenshot to file
-            File screenshotFile = new File("test-output/screenshots/" + fileName + ".png");
-            FileUtils.copyFile(tempFile,screenshotFile);
-
-
-            return "../test-output/screenshots/" + fileName + ".png";
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            String screenshotBase64 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+            return screenshotBase64;
         }
-    }
-
-    private static void createDirectory(String directoryPath) throws IOException {
-        if (!Files.exists(Paths.get(directoryPath))) {
-            Files.createDirectories(Paths.get(directoryPath));
-        }
-    }
-
-    private static String generateFileName() {
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
-        return now.format(formatter);
-    }
 }
 
