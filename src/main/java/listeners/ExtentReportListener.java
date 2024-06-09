@@ -8,11 +8,11 @@ import com.flightfinder.genericutility.BaseClass;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -27,15 +27,16 @@ public class ExtentReportListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("./ExtentReport/TestExecutionReport.html");
-		sparkReporter.config().setDocumentTitle("Test Report");
-		sparkReporter.config().setReportName("Test Report");
+		sparkReporter.config().setDocumentTitle("Test Execution Report");
+		sparkReporter.config().setReportName("Test Execution Report");
 		sparkReporter.config().thumbnailForBase64(true);
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Host Name", "Localhost");
-		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("User Name", "Tester");
+		extent.setSystemInfo("OS Name",System.getProperty("os.name"));
+		extent.setSystemInfo("OS version",System.getProperty("os.version"));
+		extent.setSystemInfo("QA", "Sumit Tirole");
 	}
 
 	@Override
@@ -85,6 +86,11 @@ public class ExtentReportListener implements ITestListener {
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
 		return now.format(formatter);
+	}
+
+	public static void setBrowserInfo(String browserName, String browserVersion) {
+		extent.setSystemInfo("Browser Name", browserName);
+		extent.setSystemInfo("Browser Version", browserVersion);
 	}
 
 }

@@ -3,6 +3,8 @@ package com.flightfinder.genericutility;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.time.Duration;
+
+import listeners.ExtentReportListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -38,10 +41,10 @@ public class BaseClass {
 		if(browserName.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
-	        options.addArguments("--window-size=" + windowSize);
+			options.addArguments("--window-size=" + windowSize);
 //	        System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\chromedriver.exe");
 			driver = new ChromeDriver(options);
-			}
+		}
 		
 		else if(browserName.equals("edge")) {
 			EdgeOptions options = new EdgeOptions();
@@ -60,6 +63,7 @@ public class BaseClass {
 			}
 		else { System.out.println("BrowserName should be chrome, edge, firefox(lowercase letters) "); 
 		}
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(5));

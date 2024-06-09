@@ -9,6 +9,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.flightfinder.genericutility.BaseClass;
@@ -29,6 +30,10 @@ public class Alerts extends BaseClass {
 		
 	@Test(priority=1, enabled = true, description="Create an Alert on prod environment")
 	public void create_Alert_Prod() throws Throwable {
+		String browserValue = ((RemoteWebDriver) driver).getCapabilities().getBrowserName();
+		String browserVersion = ((RemoteWebDriver) driver).getCapabilities().getBrowserVersion();
+		ExtentReportListener.setBrowserInfo(browserValue,browserVersion);
+
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
@@ -73,6 +78,7 @@ public class Alerts extends BaseClass {
 	
 	@Test(priority=2, enabled = true, description="Edit an Alert on prod environment")
 	public void edit_Alert_Prod() throws Throwable {
+
 		try {driver.get(fileUtils.readFromPropertyFile("url"));}
 		catch(WebDriverException e) {}
 		CreateAlertElements element = new CreateAlertElements(driver);
