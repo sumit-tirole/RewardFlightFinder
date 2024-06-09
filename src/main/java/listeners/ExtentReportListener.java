@@ -29,6 +29,7 @@ public class ExtentReportListener implements ITestListener {
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("./ExtentReport/TestExecutionReport.html");
 		sparkReporter.config().setDocumentTitle("Test Report");
 		sparkReporter.config().setReportName("Test Report");
+		sparkReporter.config().thumbnailForBase64(true);
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
@@ -57,9 +58,9 @@ public class ExtentReportListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		test.get().log(Status.FAIL, "Test Failed");
-		test.get().log(Status.FAIL, result.getThrowable());
 		String screenshotBase64 = ((TakesScreenshot) BaseClass.getDriver()).getScreenshotAs(OutputType.BASE64);
-		test.get().info("Failed step: ",MediaEntityBuilder.createScreenCaptureFromBase64String("data:image/png;base64,"+screenshotBase64).build());
+		test.get().info("Failure Screenshot: ",MediaEntityBuilder.createScreenCaptureFromBase64String("data:image/png;base64,"+screenshotBase64).build());
+		test.get().log(Status.FAIL, result.getThrowable());
 	}
 
 	@Override
@@ -77,7 +78,6 @@ public class ExtentReportListener implements ITestListener {
 	}
 
 	public static void screenshot(String screenshotPath1,String message) throws IOException {
-
 		test.get().info(message,MediaEntityBuilder.createScreenCaptureFromBase64String("data:image/png;base64,"+screenshotPath1).build());
 	}
 

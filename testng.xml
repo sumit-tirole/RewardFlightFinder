@@ -16,9 +16,6 @@
         <class name="stage.SignupStage"></class>
         <class name="dev.SignupDev"></class>
 
-
-
-
    		 
    </classes>
   </test> <!-- Test -->
