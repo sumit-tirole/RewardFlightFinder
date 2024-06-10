@@ -42,6 +42,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
 		element.getSignInButton().click();
+		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
@@ -88,6 +89,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));
 		element.getSignInButton().click();
+		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
@@ -181,6 +183,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzeemail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodbronzepass"));
 		element.getSignInButton().click();
+		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
@@ -236,6 +239,7 @@ public class Membership_Restrictions extends BaseClass {
 		element.getEmailTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilveremail"));
 		element.getPasswordTextField().sendKeys(fileUtils.readFromPropertyFile("prodsilverpass"));
 		element.getSignInButton().click();
+		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.click(element.getWhereToField()).pause(1000).sendKeys("nyc" , Keys.ENTER).build().perform();
 		element.getSearchButton().click();
