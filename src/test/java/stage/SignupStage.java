@@ -58,7 +58,7 @@ public class SignupStage extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
         }
 	
-	@Test(priority=2, enabled = true, description = "Signup as a Silver Yearly user on stage environment")
+	@Test(priority=2, enabled = true, description = "Signup as a Silver Yearly user on stage environment",invocationCount = 1)
 	public void signup_SilverYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -105,7 +105,7 @@ public class SignupStage extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=3, enabled = true, description = "Signup as a Gold Yearly user on stage environment")
+	@Test(priority=3, enabled = true, description = "Signup as a Gold Yearly user on stage environment",invocationCount = 1)
 	public void signup_GoldYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -152,7 +152,7 @@ public class SignupStage extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=4, enabled = true, description = "Signup as a Silver Monthly user on stage environment")
+	@Test(priority=4, enabled = true, description = "Signup as a Silver Monthly user on stage environment",invocationCount = 1)
 	public void signup_SilverMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -201,7 +201,7 @@ public class SignupStage extends BaseClass {
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=5, enabled = true, description = "Signup as a Gold Monthly user on stage environment")
+	@Test(priority=5, enabled = true, description = "Signup as a Gold Monthly user on stage environment",invocationCount = 1)
 	public void signup_GoldMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
