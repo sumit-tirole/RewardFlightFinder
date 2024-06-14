@@ -241,12 +241,12 @@ public class SignUpElements {
 		return subscribeButton;
 	}
 	
-	@FindBy(xpath="//p[@class='thankyou-page__text mb-0']")
+	@FindBy(xpath="//div[@class='thankyou-page']//p[@class='thankyou-page__text mb-0']")
 	WebElement confirmSilverSignup;
 
 	
 	public WebElement getConfirmSilverSignup() {
-		synchronised(By.xpath("//p[@class='thankyou-page__text mb-0']"),confirmSilverSignup);
+		synchronised(By.xpath("//div[@class='thankyou-page']//p[@class='thankyou-page__text mb-0']"),confirmSilverSignup);
 		return confirmSilverSignup;
 	}
 	

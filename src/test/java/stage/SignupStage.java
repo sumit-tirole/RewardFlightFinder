@@ -51,7 +51,6 @@ public class SignupStage extends BaseClass {
 		} catch (TimeoutException e) {
 		    
 		}
-        System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for bronze signup validation");
         element.getContinueAfterSignUpButton().click();
@@ -92,13 +91,12 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver yearly signup validation");
         element.getContinueSilverSignupButton().click();
@@ -139,13 +137,12 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold yearly signup validation");
         element.getContinueSilverSignupButton().click();
@@ -188,13 +185,12 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver monthly signup validation");
         element.getContinueSilverSignupButton().click();
@@ -237,13 +233,12 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold monthly signup validation");
         element.getContinueSilverSignupButton().click();
