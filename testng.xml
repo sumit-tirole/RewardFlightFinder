@@ -9,7 +9,6 @@
   <test thread-count="5" name="Test">
     <classes>
 
-       	
         <class name="prod.Alerts"></class>
 		<class name="prod.Membership_Restrictions"></class>
 		<class name="prod.Regression"></class>
