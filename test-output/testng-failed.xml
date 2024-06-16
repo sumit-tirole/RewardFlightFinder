@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="prod.Regression">
+      <class name="stage.SignupStage">
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="login_With_Facebook_Prod"/>
+          <include name="signup_SilverMonthly_Stage"/>
         </methods>
-      </class> <!-- prod.Regression -->
+      </class> <!-- stage.SignupStage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

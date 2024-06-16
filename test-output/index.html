@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\wbox42\AppData\Local\Temp\testng-eclipse-14350131\testng-customsuite.xml</span>
+                    <span>C:\Users\wbox42\AppData\Local\Temp\testng-eclipse--1249779974\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="prod.Regression" class="method navigator-link" hash-for-method="login_With_Facebook_Prod">login_With_Facebook_Prod</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="stage.SignupStage" class="method navigator-link" hash-for-method="signup_SilverMonthly_Stage">signup_SilverMonthly_Stage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,20 +121,25 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">prod.Regression</span>
+              <span class="class-name">stage.SignupStage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login_With_Facebook_Prod">
-                  </a> <!-- login_With_Facebook_Prod -->
-                  <span class="method-name">login_With_Facebook_Prod</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&quot;email&quot;] (tried for 30 second(s) with 500 milliseconds interval)
+                  <a name="signup_SilverMonthly_Stage">
+                  </a> <!-- signup_SilverMonthly_Stage -->
+                  <span class="method-name">signup_SilverMonthly_Stage</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;thankyou-page&apos;]//p[@class=&apos;thankyou-page__text mb-0&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.57, chrome: {chromedriverVersion: 126.0.6478.61 (8dc092df54ce..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58994/devtoo..., se:cdpVersion: 126.0.6478.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4466dfa965fab9fb1b337d1ffbc411f4
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.flightfinder.pomrepo.FacebookLogin.synchronised(FacebookLogin.java:25)
-	at com.flightfinder.pomrepo.FacebookLogin.getFbEmailTextField(FacebookLogin.java:50)
-	at prod.Regression.login_With_Facebook_Prod(Regression.java:152)
+	at com.flightfinder.pomrepo.SignUpElements.synchronised(SignUpElements.java:25)
+	at com.flightfinder.pomrepo.SignUpElements.getConfirmSilverSignup(SignUpElements.java:249)
+	at stage.SignupStage.signup_SilverMonthly_Stage(SignupStage.java:195)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -161,35 +166,10 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=125.0.6422.142)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bcf1f3b71f1677c2a439f25c6ecf10a4, findElement {using=xpath, value=//*[@id=&quot;email&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\wbox42\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60758/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bcf1f3b71f1677c2a439f25c6ecf10a4
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 29 more
 
 </div> <!-- stack-trace -->
+                  <em>
+(Signup as a Silver Monthly user on stage environment)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,7 +177,7 @@ Session ID: bcf1f3b71f1677c2a439f25c6ecf10a4
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\wbox42\AppData\Local\Temp\testng-eclipse-14350131\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\wbox42\AppData\Local\Temp\testng-eclipse--1249779974\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -206,11 +186,11 @@ Session ID: bcf1f3b71f1677c2a439f25c6ecf10a4
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;prod.Regression&quot;&gt;
+      &lt;class name=&quot;stage.SignupStage&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;login_With_Facebook_Prod&quot;/&gt;
+          &lt;include name=&quot;signup_SilverMonthly_Stage&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- prod.Regression --&gt;
+      &lt;/class&gt; &lt;!-- stage.SignupStage --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -252,14 +232,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login_With_Facebook_Prod')
-data.setCell(0, 2, 'prod.Regression')
-data.setCell(0, 3, 50326);
+data.setCell(0, 1, 'signup_SilverMonthly_Stage')
+data.setCell(0, 2, 'stage.SignupStage')
+data.setCell(0, 3, 120650);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -274,53 +254,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">21 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">prod.Regression</span>
+              <span class="ignored-class-name">stage.SignupStage</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">ApplestoreProd</span>
+                <span class="ignored-method-name">signup_GoldMonthly_Stage</span>
                 <br/>
-                <span class="ignored-method-name">login_Valid_Credentials_Prod</span>
+                <span class="ignored-method-name">signup_GoldYearly_Stage</span>
                 <br/>
-                <span class="ignored-method-name">LinkedinProd</span>
+                <span class="ignored-method-name">signup_Bronze_Stage</span>
                 <br/>
-                <span class="ignored-method-name">check_one_alert_restriction_bronze</span>
-                <br/>
-                <span class="ignored-method-name">popularTopics_Check_Prod</span>
-                <br/>
-                <span class="ignored-method-name">login_Invalid_Credentials_Prod</span>
-                <br/>
-                <span class="ignored-method-name">facebookProd</span>
-                <br/>
-                <span class="ignored-method-name">TwitterProd</span>
-                <br/>
-                <span class="ignored-method-name">popularArticles_Check_Prod</span>
-                <br/>
-                <span class="ignored-method-name">login_With_Google_Prod</span>
-                <br/>
-                <span class="ignored-method-name">Check_Map_Page_Destinations</span>
-                <br/>
-                <span class="ignored-method-name">AppstoreImage_Check_Prod</span>
-                <br/>
-                <span class="ignored-method-name">KbarHeaderProd</span>
-                <br/>
-                <span class="ignored-method-name">popularBlogs_Check_Prod</span>
-                <br/>
-                <span class="ignored-method-name">GooglePlayProd</span>
-                <br/>
-                <span class="ignored-method-name">login_With_Apple_Prod</span>
-                <br/>
-                <span class="ignored-method-name">signup_Bronze_Prod</span>
-                <br/>
-                <span class="ignored-method-name">GuestuserProd</span>
-                <br/>
-                <span class="ignored-method-name">InstagramProd</span>
-                <br/>
-                <span class="ignored-method-name">check_five_alert_restriction_silver</span>
-                <br/>
-                <span class="ignored-method-name">Check_bronze_mapPage_restrictions</span>
+                <span class="ignored-method-name">signup_SilverYearly_Stage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -332,7 +278,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">prod.Regression</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">stage.SignupStage</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">preConditions</span>
                 <span class="method-start">0 ms</span>
@@ -340,14 +286,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login_With_Facebook_Prod</span>
-                <span class="method-start">2647 ms</span>
+                <span class="method-name">signup_SilverMonthly_Stage</span>
+                <span class="method-start">3157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">postConditions</span>
-                <span class="method-start">52983 ms</span>
+                <span class="method-start">123815 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

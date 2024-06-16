@@ -51,14 +51,13 @@ public class SignupStage extends BaseClass {
 		} catch (TimeoutException e) {
 		    
 		}
-        System.out.println(element.getConfirmSignUp().getText());  //Printing successfull signup message to console
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for bronze signup validation");
         element.getContinueAfterSignUpButton().click();
         ExtentReportListener.logMessage("Email: "+email);
         }
 	
-	@Test(priority=2, enabled = true, description = "Signup as a Silver Yearly user on stage environment")
+	@Test(priority=2, enabled = true, description = "Signup as a Silver Yearly user on stage environment",invocationCount = 1)
 	public void signup_SilverYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -92,20 +91,19 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver yearly signup validation");
         element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=3, enabled = true, description = "Signup as a Gold Yearly user on stage environment")
+	@Test(priority=3, enabled = true, description = "Signup as a Gold Yearly user on stage environment",invocationCount = 1)
 	public void signup_GoldYearly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -139,20 +137,19 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold yearly signup validation");
         element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=4, enabled = true, description = "Signup as a Silver Monthly user on stage environment")
+	@Test(priority=4, enabled = true, description = "Signup as a Silver Monthly user on stage environment",invocationCount = 1)
 	public void signup_SilverMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -188,20 +185,19 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver monthly signup validation");
         element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
-	@Test(priority=5, enabled = true, description = "Signup as a Gold Monthly user on stage environment")
+	@Test(priority=5, enabled = true, description = "Signup as a Gold Monthly user on stage environment",invocationCount = 1)
 	public void signup_GoldMonthly_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -237,13 +233,12 @@ public class SignupStage extends BaseClass {
         element.getExpiryTextField().sendKeys("1224");
         element.getCvvTextField().sendKeys("123");
         element.getNextButton2().click();
+        element.getSubscribeButton().click();
         try {
 		    waitForLoader();
 		} catch (TimeoutException e) {
 		    
 		}
-        element.getSubscribeButton().click();
-        System.out.println(element.getConfirmSilverSignup().getText());
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold monthly signup validation");
         element.getContinueSilverSignupButton().click();
