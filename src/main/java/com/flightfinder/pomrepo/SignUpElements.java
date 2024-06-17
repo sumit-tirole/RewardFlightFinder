@@ -22,7 +22,7 @@ public class SignUpElements {
 	
 	public void synchronised(By locator, WebElement element)  {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		wait.until(ExpectedConditions.elementToBeClickable(element));	
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		try {
