@@ -22,7 +22,7 @@ public class SignupStage extends BaseClass {
 	public static String outboundDate;
 	public Logger log = LogManager.getLogger(SignupStage.class);
 		
-	@Test(priority=1, enabled = true, description = "Signup as a Bronze user on stage environment")
+	@Test(priority=1, enabled = true, description = "Signup as a Bronze user on stage environment",invocationCount = 1)
 	public void signup_Bronze_Stage() throws Throwable {
 		try {driver.get(fileUtils.readFromPropertyFile("stageurl"));}
 		catch(WebDriverException e) {}
@@ -99,7 +99,7 @@ public class SignupStage extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver yearly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -145,7 +145,7 @@ public class SignupStage extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold yearly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -193,7 +193,7 @@ public class SignupStage extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver monthly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -241,7 +241,7 @@ public class SignupStage extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold monthly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 

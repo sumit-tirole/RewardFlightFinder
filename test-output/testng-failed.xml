@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="stage.SignupStage">
+      <class name="stage.Alerts">
+        <methods>
+          <include name="delete_Alert_Stage"/>
+          <include name="edit_Alert_Stage"/>
+          <include name="create_Alert_Stage"/>
+          <include name="postConditions"/>
+          <include name="preConditions"/>
+        </methods>
+      </class> <!-- stage.Alerts -->
+      <class name="prod.Alerts">
         <methods>
           <include name="postConditions"/>
           <include name="preConditions"/>
-          <include name="signup_SilverMonthly_Stage"/>
+          <include name="edit_Alert_Prod"/>
         </methods>
-      </class> <!-- stage.SignupStage -->
+      </class> <!-- prod.Alerts -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

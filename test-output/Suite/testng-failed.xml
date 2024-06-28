@@ -6,16 +6,22 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="dev.SignupDev">
+      <class name="stage.Alerts">
         <methods>
-          <include name="signup_GoldMonthly_Dev"/>
-          <include name="signup_SilverMonthly_Dev"/>
-          <include name="signup_GoldYearly_Dev"/>
-          <include name="signup_SilverYearly_Dev"/>
+          <include name="delete_Alert_Stage"/>
+          <include name="edit_Alert_Stage"/>
+          <include name="create_Alert_Stage"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
         </methods>
-      </class> <!-- dev.SignupDev -->
+      </class> <!-- stage.Alerts -->
+      <class name="prod.Alerts">
+        <methods>
+          <include name="postConditions"/>
+          <include name="preConditions"/>
+          <include name="edit_Alert_Prod"/>
+        </methods>
+      </class> <!-- prod.Alerts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

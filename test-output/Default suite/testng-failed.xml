@@ -5,6 +5,9 @@
     <classes>
       <class name="stage.SignupStage">
         <methods>
+          <include name="signup_GoldMonthly_Stage"/>
+          <include name="signup_Bronze_Stage"/>
+          <include name="signup_SilverYearly_Stage"/>
           <include name="postConditions"/>
           <include name="preConditions"/>
           <include name="signup_SilverMonthly_Stage"/>

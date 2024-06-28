@@ -53,7 +53,7 @@ public class SignupDev extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Bronze signup validation");
-        element.getContinueAfterSignUpButton().click();
+//        element.getContinueAfterSignUpButton().click();
         ExtentReportListener.logMessage("Email: "+email);
         }
 	
@@ -99,7 +99,7 @@ public class SignupDev extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for silver yearly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -145,7 +145,7 @@ public class SignupDev extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold yearly signup  validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -193,7 +193,7 @@ public class SignupDev extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Silver monthly signup validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
@@ -241,7 +241,7 @@ public class SignupDev extends BaseClass {
 		}
         String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
     	ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Gold monthly validation");
-        element.getContinueSilverSignupButton().click();
+//        element.getContinueSilverSignupButton().click();
         ExtentReportListener.logMessage("Email: "+email);
 	}
 	
