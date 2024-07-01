@@ -101,6 +101,7 @@ public class Alerts extends BaseClass {
 			
 		element1.getEditAlertButton(outboundDate).click();
 		Actions actions = new Actions(driver);
+		Thread.sleep(1000);
 		actions.moveToElement(element2.getAddPassengersButton()).pause(1000).click().perform();
 		element2.getSaveButton().click();
 		System.out.println(element2.getConfirmEditAlert().getText());
