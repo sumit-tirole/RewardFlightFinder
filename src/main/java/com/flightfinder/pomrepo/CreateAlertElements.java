@@ -69,7 +69,7 @@ public class CreateAlertElements {
 	}
 
 	public WebElement getCreateAlertButton() {
-		synchronised(By.xpath("//button[text()='Create Alert']"),createAlertButton);
+		synchronised(By.xpath("//button[@class='ui button btn btn--dark']"),createAlertButton);
 		return createAlertButton;
 	}
 
@@ -153,7 +153,7 @@ public class CreateAlertElements {
 	@FindBy(xpath="//button[text()='Search Now']")
 	WebElement searchButton;
 	
-	@FindBy(xpath="//button[text()='Create Alert']")
+	@FindBy(xpath="//button[@class='ui button btn btn--dark']")
 	WebElement createAlertButton;
 	
 	@FindBy(xpath="//input[@name='departStartDate']")
