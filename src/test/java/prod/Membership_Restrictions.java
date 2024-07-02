@@ -69,7 +69,7 @@ public class Membership_Restrictions extends BaseClass {
 		WebElement createAlertButton = driver.findElement(By.xpath("//div[@class='popup-footer']/button[text()='Create Alert']"));
 		Assert.assertEquals(createAlertButton.isEnabled(),false);
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert created validation");
+		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for date range Restrictions for Bronze user");
 		element.getCloseButton2().click();
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
@@ -115,7 +115,7 @@ public class Membership_Restrictions extends BaseClass {
 		WebElement createAlertButton = driver.findElement(By.xpath("//div[@class='popup-footer']/button[text()='Create Alert']"));
 		Assert.assertEquals(createAlertButton.isEnabled(),false);
 		String screenshotPath1 = ScreenshotUtility.captureScreenshot(driver);
-		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for Alert created validation");
+		ExtentReportListener.screenshot(screenshotPath1,"Screenshot for date range Restrictions for Silver user");
 		element.getCloseButton2().click();
 		element.getAccountButton().click();
 		element.getLogoutButton().click();
